@@ -1,85 +1,42 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <header></header>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <div class="sidebar sidebar--left"></div>
+  <div class="sidebar sidebar--right"></div>
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 header {
-  line-height: 1.5;
-  max-height: 100vh;
+  height: 56px;
+  box-shadow: 0 1px 2px var(rgba(0, 0, 0, 0.9)),
+    0 0px 2px var(rgba(0, 0, 0, 0.9)) !important;
+  background-color: #18181b;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+main {
+  height: calc(100vh - 56px);
 }
 
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
+.sidebar {
+  position: absolute;
+  top: 56px;
+  height: calc(100vh - 56px);
+  width: 240px;
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+  &--left {
+    left: 0;
   }
 
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
+  &--right {
+    right: 0;
   }
 }
 </style>
