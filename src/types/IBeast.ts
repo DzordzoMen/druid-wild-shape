@@ -7,8 +7,9 @@ import type { ISpeed } from './ISpeed';
 export interface IBeast {
   name: string;
   description?: string | null;
-  health: number;
+  hitPoints: number;
   armorClass?: number | null;
+  challenge: number;
   speed: ISpeed[];
   size: Size;
   alignment: Alignment;
