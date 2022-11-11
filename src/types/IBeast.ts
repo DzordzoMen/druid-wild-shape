@@ -2,13 +2,14 @@ import type { Alignment } from './enums/Alignment';
 import type { Environment } from './enums/Environment';
 import type { Size } from './enums/Size';
 import type { IAbilities } from './IAbilities';
+import type { ISpeed } from './ISpeed';
 
 export interface IBeast {
   name: string;
   description?: string | null;
   health: number;
   armorClass?: number | null;
-  move: object[]; // TODO
+  speed: ISpeed[];
   size: Size;
   alignment: Alignment;
   environment: Environment[];
