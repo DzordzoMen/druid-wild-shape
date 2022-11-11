@@ -8,6 +8,7 @@ export interface IBeast {
   name: string;
   description?: string | null;
   hitPoints: number;
+  hitPointsInfo: string;
   armorClass?: number | null;
   challenge: number;
   speed: ISpeed[];
