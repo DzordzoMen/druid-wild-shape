@@ -19,5 +19,6 @@ export interface IBeast {
   passivePerception?: number | null;
   proficiencyBonus?: number | null;
   abilities: IAbilities;
+  traits: object[]; // like pack tactics
   actions: object[]; // TODO
 }
