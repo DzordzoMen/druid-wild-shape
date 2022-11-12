@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { RouterView } from 'vue-router';
 import CommonSidebar from './components/CommonSidebar.vue';
+import OptionsSidebar from './components/TheOptionsSidebar.vue';
 
 const showLeftSidebar = ref(false);
 const showRightSidebar = ref(true);
@@ -18,7 +19,7 @@ function test(): void {
   </header>
 
   <common-sidebar :show="showLeftSidebar" left />
-  <common-sidebar :show="showRightSidebar" right />
+  <options-sidebar :show="showRightSidebar" />
 
   <main
     :class="{
