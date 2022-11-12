@@ -3,17 +3,26 @@
     class="common-chip"
     :class="{ 'common-chip--selected': selected }"
     tabindex="0"
-    @keypress="selected = !selected"
-    @click="selected = !selected"
+    @keypress="clickHandler()"
+    @click="clickHandler()"
   >
     <slot />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, defineEmits } from 'vue';
 
 const selected = ref(false);
+
+const emit = defineEmits<{
+  (e: 'selected', value: boolean): void;
+}>();
+
+function clickHandler(): void {
+  selected.value = !selected.value;
+  emit('selected', selected.value);
+}
 </script>
 
 <style scoped lang="scss">
