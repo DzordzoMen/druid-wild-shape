@@ -30,7 +30,8 @@ function clickHandler(): void {
   border-radius: 4px;
   padding: 8px 12px;
   flex: 0 1 auto;
-  width: fit-content;
+  display: flex;
+  justify-content: center;
   font-size: 14px;
   font-weight: 400;
   font-family: Arial, sans-serif;
