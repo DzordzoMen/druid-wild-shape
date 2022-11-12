@@ -52,7 +52,7 @@ function clickHandler(): void {
 
     &:hover,
     &:focus-visible {
-      border-color: #fff;
+      border-color: rgba($color: #fff, $alpha: 0.7);
     }
   }
 }
