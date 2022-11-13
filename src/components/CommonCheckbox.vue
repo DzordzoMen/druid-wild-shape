@@ -3,7 +3,7 @@
     <div class="common-checkbox__box">
       <input v-bind="$attrs" type="checkbox" :name="id" :id="id" />
 
-      <div class="common-checkbox__box-element"></div>
+      <div class="common-checkbox__box-element" />
     </div>
     <label :for="id">
       <slot name="label" />

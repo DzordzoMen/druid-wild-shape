@@ -38,7 +38,7 @@ defineEmits<{
   border: 1px solid transparent;
   color: #fff;
   cursor: pointer;
-  // TODO use after with padding??
+
   &:hover,
   &:focus-visible {
     outline: none;
