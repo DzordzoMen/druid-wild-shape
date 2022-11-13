@@ -3,26 +3,24 @@
     class="common-chip"
     :class="{ 'common-chip--selected': selected }"
     tabindex="0"
-    @keypress="clickHandler()"
-    @click="clickHandler()"
+    @keypress="$emit('update:selected', !selected)"
+    @click="$emit('update:selected', !selected)"
   >
     <slot />
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, defineEmits } from 'vue';
+defineProps({
+  selected: {
+    type: Boolean,
+    required: true,
+  },
+});
 
-const selected = ref(false);
-
-const emit = defineEmits<{
-  (e: 'selected', value: boolean): void;
+defineEmits<{
+  (e: 'update:selected', value: boolean): void;
 }>();
-
-function clickHandler(): void {
-  selected.value = !selected.value;
-  emit('selected', selected.value);
-}
 </script>
 
 <style scoped lang="scss">
@@ -40,7 +38,7 @@ function clickHandler(): void {
   border: 1px solid transparent;
   color: #fff;
   cursor: pointer;
-
+  // TODO use after with padding??
   &:hover,
   &:focus-visible {
     outline: none;
