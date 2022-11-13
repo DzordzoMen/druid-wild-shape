@@ -5,15 +5,18 @@
         <template #label>Druid level</template>
       </common-input>
 
-      <common-chip-group
-        v-model:modelValue="selectedItems"
-        :items="items"
-        :column="true"
-      />
-
       <common-checkbox id="moon-druid">
         <template #label>Moon druid</template>
       </common-checkbox>
+
+      <div class="sidebar-label">
+        <label>Used Handbooks</label>
+        <common-chip-group
+          v-model:modelValue="selectedItems"
+          :items="items"
+          :column="true"
+        />
+      </div>
     </div>
   </common-sidebar>
 </template>
@@ -50,5 +53,18 @@ const selectedItems = ref(['MM', 'GtM', 'ToF']);
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.sidebar-label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+
+  & > label {
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+  }
 }
 </style>
