@@ -1,0 +1,60 @@
+<template>
+  <div class="beast-list-item">
+    <div class="beast-list-item__row">
+      <div>{{ beast.name }}</div>
+      <div>{{ beast.challenge }}</div>
+    </div>
+    <div class="beast-list-item__row">
+      <div>{{ beast.hitPoints }}</div>
+      <div>{{ beast.armorClass }}</div>
+      <div>{{ moveTypes }}</div>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import type { IBeast } from '@/types/IBeast';
+
+import { computed } from 'vue';
+
+const props = defineProps<{
+  beast: IBeast;
+}>();
+
+const moveTypes = computed(() => {
+  return props.beast.speed.map((item) => item.name).join(', ');
+});
+</script>
+
+<style scoped lang="scss">
+.beast-list-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 0 1 500px;
+  border: 1px solid #f1f1f1;
+  background-color: #262626;
+  border-radius: 8px;
+  padding: 12px;
+  color: #fff;
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    flex: 1 1;
+    gap: 10px;
+
+    & > div {
+      display: flex;
+      flex: 1 1;
+    }
+
+    &:first-child {
+      & > div:last-child {
+        flex: 0 1;
+      }
+    }
+  }
+}
+</style>
