@@ -5,7 +5,16 @@
     "hitPointsInfo": "1d4 + 1",
     "armorClass": 3,
     "challenge": 0,
-    "speed": [],
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 20
+      },
+      {
+        "name": "Burrow",
+        "valueInFt": 5
+      }
+    ],
     "size": "Tiny",
     "alignment": "UN",
     "environment": ["Forest"],
