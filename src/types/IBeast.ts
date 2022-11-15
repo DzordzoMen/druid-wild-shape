@@ -1,8 +1,11 @@
-import type { Alignment } from './enums/Alignment';
 import type { Environment } from './enums/Environment';
-import type { Size } from './enums/Size';
+import type { Alignment } from './enums/Alignment';
 import type { IAbilities } from './IAbilities';
+import type { Size } from './enums/Size';
+import type { IAction } from './IAction';
+import type { ISkill } from './ISkill';
 import type { ISpeed } from './ISpeed';
+import type { ITrait } from './ITrait';
 
 export interface IBeast {
   name: string;
@@ -15,10 +18,10 @@ export interface IBeast {
   size: Size;
   alignment: Alignment;
   environment: Environment[];
-  skills: object[]; // TODO
+  skills: ISkill[]; // like Darkvision
   passivePerception?: number | null;
   proficiencyBonus?: number | null;
   abilities: IAbilities;
-  traits: object[]; // like pack tactics
-  actions: object[]; // TODO
+  traits: ITrait[]; // like pack tactics
+  actions: IAction[]; // like bite
 }
