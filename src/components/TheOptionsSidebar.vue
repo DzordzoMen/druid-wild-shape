@@ -1,11 +1,16 @@
 <template>
   <common-sidebar v-bind="$attrs" right>
     <div class="sidebar-content">
-      <common-input id="druid-level" placeholder="0" type="number">
+      <common-input
+        v-model:modelValue.number="druidLevel"
+        id="druid-level"
+        placeholder="0"
+        type="number"
+      >
         <template #label>Druid level</template>
       </common-input>
 
-      <common-checkbox id="moon-druid">
+      <common-checkbox v-model:modelValue="moonDruid" id="moon-druid">
         <template #label>Moon druid</template>
       </common-checkbox>
 
@@ -22,7 +27,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue';
+import { useStorage } from '@vueuse/core';
 import type { IChipGroupItem } from '../types/IChipGroupItem';
 
 import CommonSidebar from './CommonSidebar.vue';
@@ -45,7 +50,11 @@ const items: IChipGroupItem[] = [
   },
 ];
 
-const selectedItems = ref(['MM', 'GtM', 'ToF']);
+const druidLevel = useStorage('druid-level', '');
+
+const selectedItems = useStorage('used-handbooks', ['MM', 'GtM', 'ToF']);
+
+const moonDruid = useStorage('moon-druid', true);
 </script>
 
 <style scoped lang="scss">
