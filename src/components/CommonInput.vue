@@ -3,12 +3,25 @@
     <label :for="id">
       <slot name="label" />
     </label>
-    <input v-bind="$attrs" :type="type" :id="id" :placeholder="placeholder" />
+    <input
+      v-model="value"
+      v-bind="$attrs"
+      :type="type"
+      :id="id"
+      :placeholder="placeholder"
+    />
   </div>
 </template>
 
 <script setup lang="ts">
-defineProps({
+import { computed } from 'vue';
+
+const props = defineProps({
+  modelValue: {
+    type: [String, Number],
+    required: false,
+    default: null,
+  },
   id: {
     type: String,
     required: true,
@@ -22,6 +35,15 @@ defineProps({
     type: String,
     required: false,
     default: null,
+  },
+});
+
+const emit = defineEmits(['update:modelValue']);
+
+const value = computed({
+  get: () => props.modelValue,
+  set: (val: string | number | null) => {
+    emit('update:modelValue', val);
   },
 });
 </script>
