@@ -1,9 +1,15 @@
 <template>
   <div class="common-checkbox common-checkbox__wrapper">
     <div class="common-checkbox__box">
-      <input v-bind="$attrs" type="checkbox" :name="id" :id="id" />
+      <input
+        v-model="value"
+        v-bind="$attrs"
+        type="checkbox"
+        :name="id"
+        :id="id"
+      />
 
-      <div class="common-checkbox__box-element" />
+      <div class="common-checkbox__box-element" @click="value = !value" />
     </div>
     <label :for="id">
       <slot name="label" />
@@ -12,10 +18,26 @@
 </template>
 
 <script setup lang="ts">
-defineProps({
+import { computed } from 'vue';
+
+const props = defineProps({
+  modelValue: {
+    type: Boolean,
+    required: false,
+    default: false,
+  },
   id: {
     type: String,
     required: true,
+  },
+});
+
+const emit = defineEmits(['update:modelValue']);
+
+const value = computed({
+  get: () => props.modelValue,
+  set: (val: boolean) => {
+    emit('update:modelValue', val);
   },
 });
 </script>
