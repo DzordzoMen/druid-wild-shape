@@ -51,6 +51,7 @@ const transitionName = computed(() => {
   height: calc(100vh - 56px);
   width: 240px;
   background-color: #262626;
+  z-index: 6; // on mobile device
   padding: 12px;
 
   &--left {
