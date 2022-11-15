@@ -1,49 +1,42 @@
-{
-  "name": "Badger",
-  "hitPoints": 3,
-  "hitPointsInfo": "1d4 + 1",
-  "armorClass": 3,
-  "challenge": 0,
-  "speed": [
-    {
-      "name": "Walk",
-      "valueInFt": 20
+[
+  {
+    "name": "Badger",
+    "hitPoints": 3,
+    "hitPointsInfo": "1d4 + 1",
+    "armorClass": 3,
+    "challenge": 0,
+    "speed": [],
+    "size": "Tiny",
+    "alignment": "UN",
+    "environment": ["Forest"],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "30 ft.",
+        "tooltip": "A monster with darkvision can see in the dark within a specific radius. The monster can see in dim light within the radius as if it were bright light, and in darkness as if it were dim light. The monster can't discern color in darkness, only shades of gray. Many creatures that live underground have this special sense."
+      }
+    ],
+    "passivePerception": 11,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 4,
+      "dexterity": 11,
+      "constitution": 12,
+      "intelligence": 2,
+      "wisdom": 12,
+      "charisma": 5
     },
-    {
-      "name": "Burrow",
-      "valueInFt": 5
-    }
-  ],
-  "size": "Tiny",
-  "alignment": "UN",
-  "environment": ["Forest"],
-  "skills": [
-    {
-      "name": "Darkvision",
-      "value": "30 ft.",
-      "tooltip": "A monster with darkvision can see in the dark within a specific radius. The monster can see in dim light within the radius as if it were bright light, and in darkness as if it were dim light. The monster can't discern color in darkness, only shades of gray. Many creatures that live underground have this special sense."
-    }
-  ],
-  "passivePerception": 11,
-  "proficiencyBonus": 2,
-  "abilities": {
-    "strength": 4,
-    "dexterity": 11,
-    "constitution": 12,
-    "intelligence": 2,
-    "wisdom": 12,
-    "charisma": 5
-  },
-  "traits": [
-    {
-      "name": "Keen Smell",
-      "description": "The badger has advantage on Wisdom (Perception) checks that rely on smell."
-    }
-  ],
-  "actions": [
-    {
-      "name": "Bite",
-      "description": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 1 piercing damage."
-    }
-  ]
-}
+    "traits": [
+      {
+        "name": "Keen Smell",
+        "description": "The badger has advantage on Wisdom (Perception) checks that rely on smell."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 1 piercing damage."
+      }
+    ]
+  }
+]
