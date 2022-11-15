@@ -69,6 +69,13 @@ const value = computed({
           }
         }
       }
+
+      &:hover,
+      &:focus-visible {
+        & ~ .common-checkbox__box-element {
+          border-color: #9fa8da;
+        }
+      }
     }
 
     & > &-element {
