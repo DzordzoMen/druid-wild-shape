@@ -1,4 +1,5 @@
 export enum Alignment {
+  UN = 'Unaligned',
   LG = 'Lawful Good',
   NG = 'Neutral Good',
   CG = 'Chaotic Good',
