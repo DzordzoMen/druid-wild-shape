@@ -832,5 +832,48 @@
         "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) slashing damage."
       }
     ]
+  },
+  {
+    "name": "Elephant",
+    "hitPoints": 76,
+    "hitPointsInfo": "8d12+24",
+    "armorClass": 12,
+    "challenge": "4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Huge",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 22,
+      "dexterity": 9,
+      "constitution": 17,
+      "intelligence": 3,
+      "wisdom": 11,
+      "charisma": 6
+    },
+    "traits": [
+      {
+        "name": "Trampling Charge",
+        "description": "If the elephant moves at least 20 ft. straight toward a creature and then hits it with a gore attack on the same turn, that target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the elephant can make one stomp attack against it as a bonus action."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: (3d8 + 6) piercing damage."
+      },
+      {
+        "name": "Stomp",
+        "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one prone creature. Hit: (3d10 + 6) bludgeoning damage."
+      }
+    ]
   }
 ]
