@@ -784,5 +784,53 @@
         "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: (2d4 + 4) bludgeoning damage."
       }
     ]
+  },
+  {
+    "name": "Eagle",
+    "hitPoints": 3,
+    "hitPointsInfo": "1d6",
+    "armorClass": 12,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 10
+      },
+      {
+        "name": "Fly",
+        "valueInFt": 60
+      }
+    ],
+    "size": "Small",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+4"
+      }
+    ],
+    "passivePerception": 14,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 6,
+      "dexterity": 15,
+      "constitution": 10,
+      "intelligence": 2,
+      "wisdom": 14,
+      "charisma": 7
+    },
+    "traits": [
+      {
+        "name": "Keen Sight",
+        "description": "The eagle has advantage on Wisdom (Perception) checks that rely on sight."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Talons",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) slashing damage."
+      }
+    ]
   }
 ]
