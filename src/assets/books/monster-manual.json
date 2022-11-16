@@ -468,7 +468,7 @@
   },
   {
     "name": "Cat",
-    "hitPoints": 12,
+    "hitPoints": 2,
     "hitPointsInfo": "1d4",
     "armorClass": 12,
     "challenge": "0",
@@ -515,6 +515,53 @@
       {
         "name": "Claws",
         "description": "Melee Weapon Attack: +0 to hit, reach 5 ft., one target. Hit: (1d1) slashing damage."
+      }
+    ]
+  },
+  {
+    "name": "Constrictor Snake",
+    "hitPoints": 13,
+    "hitPointsInfo": "2d10+2",
+    "armorClass": 12,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      },
+      {
+        "name": "Swim",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Blindsight",
+        "value": "10 ft."
+      }
+    ],
+    "passivePerception": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 15,
+      "dexterity": 14,
+      "constitution": 12,
+      "intelligence": 1,
+      "wisdom": 10,
+      "charisma": 3
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: (1d6 + 2) piercing damage."
+      },
+      {
+        "name": "Constrict",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: (1d8 + 2) bludgeoning damage. The target is grappled (escape dc 14) Until this grapple ends, the creature is restrained, and the snake can't constrict another target"
       }
     ]
   }
