@@ -51,6 +51,41 @@
     ]
   },
   {
+    "name": "Axe Beak",
+    "description": "An axe beak is a tall flightless bird with strong legs and a heavy, wedge-shaped beak. It has a nasty disposition and tends to Attack any unfamiliar creature that wanders too close.",
+    "hitPoints": 19,
+    "hitPointsInfo": "3d10 + 3",
+    "armorClass": 11,
+    "challenge": "1/2",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 50
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 14,
+      "dexterity": 12,
+      "constitution": 12,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 5
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Beak",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: (1d8 + 2) slashing damage."
+      }
+    ]
+  },
+  {
     "name": "Badger",
     "hitPoints": 3,
     "hitPointsInfo": "1d4 + 1",
