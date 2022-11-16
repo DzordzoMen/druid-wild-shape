@@ -664,5 +664,39 @@
         "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 7 (1d10 + 2) piercing damage, and the target is Grappled (escape DC 12). Until this grapple ends, the target is Restrained, and the crocodile can't bite another target"
       }
     ]
+  },
+  {
+    "name": "Deer",
+    "hitPoints": 4,
+    "hitPointsInfo": "1d8",
+    "armorClass": 13,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 50
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 12,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 11,
+      "dexterity": 16,
+      "constitution": 11,
+      "intelligence": 2,
+      "wisdom": 14,
+      "charisma": 5
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: (1d4) piercing damage."
+      }
+    ]
   }
 ]
