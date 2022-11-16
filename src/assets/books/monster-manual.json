@@ -564,5 +564,57 @@
         "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: (1d8 + 2) bludgeoning damage. The target is grappled (escape dc 14) Until this grapple ends, the creature is restrained, and the snake can't constrict another target"
       }
     ]
+  },
+  {
+    "name": "Crab",
+    "hitPoints": 2,
+    "hitPointsInfo": "1d4",
+    "armorClass": 11,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 20
+      },
+      {
+        "name": "Swim",
+        "valueInFt": 20
+      }
+    ],
+    "size": "Tiny",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Stealth",
+        "value": "+2"
+      },
+      {
+        "name": "Blindsight",
+        "value": "30 ft."
+      }
+    ],
+    "passivePerception": 9,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 2,
+      "dexterity": 11,
+      "constitution": 10,
+      "intelligence": 1,
+      "wisdom": 8,
+      "charisma": 2
+    },
+    "traits": [
+      {
+        "name": "Amphibious",
+        "description": "The crab can breathe air and water."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Claw",
+        "description": "Melee Weapon Attack: +0 to hit, reach 5 ft., one target. Hit: 1 bludgeoning damage."
+      }
+    ]
   }
 ]
