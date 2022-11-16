@@ -176,5 +176,57 @@
         "description": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: (1d4 - 1) piercing damage."
       }
     ]
+  },
+  {
+    "name": "Bat",
+    "hitPoints": 1,
+    "hitPointsInfo": "1d4 - 1",
+    "armorClass": 12,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 5
+      },
+      {
+        "name": "Fly",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Tiny",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Blindsight",
+        "value": "60 ft."
+      }
+    ],
+    "passivePerception": 11,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 2,
+      "dexterity": 15,
+      "constitution": 8,
+      "intelligence": 2,
+      "wisdom": 12,
+      "charisma": 4
+    },
+    "traits": [
+      {
+        "name": "Echolocation",
+        "description": "The bat can't use its Blindsight while Deafened."
+      },
+      {
+        "name": "Keen Hearing",
+        "description": "The bat has advantage on Wisdom (Perception) checks that rely on hearing."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +0 to hit, reach 5 ft., one creature. Hit: 1 piercing damage."
+      }
+    ]
   }
 ]
