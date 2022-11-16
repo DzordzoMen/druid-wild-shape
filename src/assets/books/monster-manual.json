@@ -465,5 +465,57 @@
         "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: (1d4) bludgeoning damage."
       }
     ]
+  },
+  {
+    "name": "Cat",
+    "hitPoints": 12,
+    "hitPointsInfo": "1d4",
+    "armorClass": 12,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      },
+      {
+        "name": "Climb",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Tiny",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Stealth",
+        "value": "+3"
+      },
+      {
+        "name": "Perception",
+        "value": "+4"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 3,
+      "dexterity": 15,
+      "constitution": 10,
+      "intelligence": 3,
+      "wisdom": 12,
+      "charisma": 7
+    },
+    "traits": [
+      {
+        "name": "Keen Smell",
+        "description": "The cat has advantage on Wisdom (Perception) checks that rely on smell."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Claws",
+        "description": "Melee Weapon Attack: +0 to hit, reach 5 ft., one target. Hit: (1d1) slashing damage."
+      }
+    ]
   }
 ]
