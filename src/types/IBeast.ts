@@ -13,7 +13,7 @@ export interface IBeast {
   hitPoints: number;
   hitPointsInfo: string;
   armorClass?: number | null;
-  challenge: number;
+  challenge: string;
   speed: ISpeed[];
   size: Size;
   alignment: Alignment;
