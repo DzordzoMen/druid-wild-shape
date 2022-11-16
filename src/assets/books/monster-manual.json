@@ -875,5 +875,48 @@
         "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one prone creature. Hit: (3d10 + 6) bludgeoning damage."
       }
     ]
+  },
+  {
+    "name": "Elk",
+    "hitPoints": 13,
+    "hitPointsInfo": "2d10+2",
+    "armorClass": 10,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 50
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 16,
+      "dexterity": 10,
+      "constitution": 12,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 6
+    },
+    "traits": [
+      {
+        "name": "Charge",
+        "description": "If the elk moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Ram",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: (1d6 + 3) bludgeoning damage."
+      },
+      {
+        "name": "Hooves",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one prone creature. Hit: (2d4 + 3) bludgeoning damage."
+      }
+    ]
   }
 ]
