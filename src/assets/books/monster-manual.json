@@ -279,5 +279,58 @@
         "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 7 (2d4 + 2) slashing damage."
       }
     ]
+  },
+  {
+    "name": "Blood Hawk",
+    "description": "Taking its name from its crimson feathers and aggressive Nature, the Blood Hawk fearlessly Attacks almost any animal, stabbing it with its lawyerlike beak. Blood hawks flock together in large numbers, Attacking as a pack to take down prey.",
+    "hitPoints": 7,
+    "hitPointsInfo": "2d6",
+    "armorClass": 12,
+    "challenge": "1/8",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 10
+      },
+      {
+        "name": "Fly",
+        "valueInFt": 60
+      }
+    ],
+    "size": "Small",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+4"
+      }
+    ],
+    "passivePerception": 14,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 6,
+      "dexterity": 14,
+      "constitution": 10,
+      "intelligence": 3,
+      "wisdom": 14,
+      "charisma": 5
+    },
+    "traits": [
+      {
+        "name": "Keen Sight",
+        "description": "The hawk has advantage on Wisdom (Perception) checks that rely on sight."
+      },
+      {
+        "name": "Pack Tactics",
+        "description": "The hawk has advantage on an Attack roll against a creature if at least one of the hawk's allies is within 5 ft. of the creature and the ally isn't Incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Beak",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
+      }
+    ]
   }
 ]
