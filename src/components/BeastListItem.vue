@@ -2,12 +2,12 @@
   <div class="beast-list-item">
     <div class="beast-list-item__row">
       <div>{{ beast.name }}</div>
-      <div>{{ beast.challenge }}</div>
+      <div>CR: {{ beast.challenge }}</div>
     </div>
     <div class="beast-list-item__row">
-      <div>{{ beast.hitPoints }}</div>
-      <div>{{ beast.armorClass }}</div>
-      <div>{{ moveTypes }}</div>
+      <div>HP: {{ beast.hitPoints }}</div>
+      <div>AC: {{ beast.armorClass }}</div>
+      <div>Move: {{ moveTypes }}</div>
     </div>
   </div>
 </template>
@@ -32,9 +32,8 @@ const moveTypes = computed(() => {
   flex-direction: column;
   gap: 6px;
   flex: 0 1 500px;
-  border: 1px solid #f1f1f1;
   background-color: #262626;
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 12px;
   color: #fff;
 
@@ -43,7 +42,7 @@ const moveTypes = computed(() => {
     flex-direction: row;
     flex-wrap: nowrap;
     flex: 1 1;
-    gap: 10px;
+    gap: 14px;
 
     & > div {
       display: flex;
@@ -53,6 +52,20 @@ const moveTypes = computed(() => {
     &:first-child {
       & > div:last-child {
         flex: 0 1;
+        white-space: nowrap;
+      }
+    }
+
+    &:last-child {
+      & > div {
+        &:nth-child(-n + 2) {
+          flex: 0 1;
+          white-space: nowrap;
+        }
+
+        &:last-child {
+          justify-content: flex-end;
+        }
       }
     }
   }
