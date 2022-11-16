@@ -332,5 +332,48 @@
         "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4 + 2) piercing damage."
       }
     ]
+  },
+  {
+    "name": "Boar",
+    "hitPoints": 11,
+    "hitPointsInfo": "2d8+2",
+    "armorClass": 11,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 9,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 13,
+      "dexterity": 11,
+      "constitution": 12,
+      "intelligence": 2,
+      "wisdom": 9,
+      "charisma": 5
+    },
+    "traits": [
+      {
+        "name": "Charge",
+        "description": "If the boar moves at least 20 ft. straight toward a target and then hits it with a tusk Attack on the same turn, the target takes an extra 3 (1d6) slashing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone."
+      },
+      {
+        "name": "Relentless (Recharges after a Short or Long Rest)",
+        "description": "If the boar takes 7 damage or less that would reduce it to 0 Hit Points, it is reduced to 1 hit point instead."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Tusk",
+        "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: 4 (1d6 + 1) slashing damage."
+      }
+    ]
   }
 ]
