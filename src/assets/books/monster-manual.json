@@ -133,5 +133,48 @@
         "description": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 1 piercing damage."
       }
     ]
+  },
+  {
+    "name": "Baboon",
+    "hitPoints": 3,
+    "hitPointsInfo": "1d6",
+    "armorClass": 12,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      },
+      {
+        "name": "Climb",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Small",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 11,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 8,
+      "dexterity": 14,
+      "constitution": 11,
+      "intelligence": 4,
+      "wisdom": 12,
+      "charisma": 6
+    },
+    "traits": [
+      {
+        "name": "Pack Tactics",
+        "description": "The baboon has advantage on an Attack roll against a creature if at least one of the baboon's allies is within 5 ft. of the creature and the ally isn't Incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: (1d4 - 1) piercing damage."
+      }
+    ]
   }
 ]
