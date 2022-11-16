@@ -1,10 +1,61 @@
 [
   {
+    "name": "Ape",
+    "hitPoints": 19,
+    "hitPointsInfo": "3d8 + 6",
+    "armorClass": 12,
+    "challenge": "1/2",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      },
+      {
+        "name": "Climb",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Athletics ",
+        "value": "+5"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": null,
+    "abilities": {
+      "strength": 16,
+      "dexterity": 14,
+      "constitution": 14,
+      "intelligence": 6,
+      "wisdom": 12,
+      "charisma": 7
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The ape makes two fist attacks."
+      },
+      {
+        "name": "Fist",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: (1d6 + 3) bludgeoning damage."
+      },
+      {
+        "name": "Rock",
+        "description": "Ranged Weapon Attack: +5 to hit, reach 25/50 ft., one target. Hit: (1d6 + 3) bludgeoning damage."
+      }
+    ]
+  },
+  {
     "name": "Badger",
     "hitPoints": 3,
     "hitPointsInfo": "1d4 + 1",
     "armorClass": 3,
-    "challenge": 0,
+    "challenge": "0",
     "speed": [
       {
         "name": "Walk",
