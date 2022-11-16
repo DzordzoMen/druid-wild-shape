@@ -750,5 +750,39 @@
         "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) piercing damage. If the target is a creature, it must succeed on a DC 13 Strength saving throw or be knocked prone."
       }
     ]
+  },
+  {
+    "name": "Draft Horse",
+    "hitPoints": 19,
+    "hitPointsInfo": "3d10+3",
+    "armorClass": 10,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 18,
+      "dexterity": 10,
+      "constitution": 12,
+      "intelligence": 2,
+      "wisdom": 11,
+      "charisma": 7
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Hooves",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: (2d4 + 4) bludgeoning damage."
+      }
+    ]
   }
 ]
