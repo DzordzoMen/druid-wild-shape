@@ -27,8 +27,9 @@
 </template>
 
 <script setup lang="ts">
-import { useStorage } from '@vueuse/core';
+import { computed } from 'vue';
 import type { IChipGroupItem } from '../types/IChipGroupItem';
+import { useDruidOptionsStore } from '@/stores/druidOptions';
 
 import CommonSidebar from './CommonSidebar.vue';
 import CommonInput from './CommonInput.vue';
@@ -50,11 +51,22 @@ const items: IChipGroupItem[] = [
   },
 ];
 
-const druidLevel = useStorage('druid-level', '');
+const druidOptionsModule = useDruidOptionsStore();
 
-const selectedItems = useStorage('used-handbooks', ['MM', 'GtM', 'ToF']);
+const druidLevel = computed({
+  get: () => druidOptionsModule.druidLevel,
+  set: (val: string) => druidOptionsModule.setDruidLevel(val),
+});
 
-const moonDruid = useStorage('moon-druid', true);
+const selectedItems = computed({
+  get: () => druidOptionsModule.selectedBooks,
+  set: (val: string[]) => druidOptionsModule.setSelectedBooks(val),
+});
+
+const moonDruid = computed({
+  get: () => druidOptionsModule.moonDruid,
+  set: (val: boolean) => druidOptionsModule.setMoonDruid(val),
+});
 </script>
 
 <style scoped lang="scss">
