@@ -42,6 +42,7 @@ header {
 main {
   height: calc(100vh - 56px);
   padding: 12px;
+  overflow-y: auto;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
     margin-left 0.6s cubic-bezier(0.4, 0, 0.2, 1),
     margin-right 0.6s cubic-bezier(0.4, 0, 0.2, 1),
