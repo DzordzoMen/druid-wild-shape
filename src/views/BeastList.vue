@@ -25,5 +25,7 @@ const list = monsterManualBeasts as IBeast[];
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
+  margin: auto;
+  max-width: 1020px;
 }
 </style>
