@@ -2,7 +2,7 @@ import { useStorage, type RemovableRef } from '@vueuse/core';
 import { defineStore } from 'pinia';
 
 interface State {
-  druidLevel: RemovableRef<string>;
+  druidLevel: RemovableRef<string | number>;
   selectedBooks: RemovableRef<string[]>;
   moonDruid: RemovableRef<boolean>;
 }
@@ -14,7 +14,7 @@ export const useDruidOptionsStore = defineStore('druid-options', {
     moonDruid: useStorage('moon-druid', true),
   }),
   actions: {
-    setDruidLevel(value: string): void {
+    setDruidLevel(value: string | number): void {
       this.druidLevel = value;
     },
     setSelectedBooks(value: string[]): void {

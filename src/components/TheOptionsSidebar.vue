@@ -55,7 +55,7 @@ const druidOptionsModule = useDruidOptionsStore();
 
 const druidLevel = computed({
   get: () => druidOptionsModule.druidLevel,
-  set: (val: string) => druidOptionsModule.setDruidLevel(val),
+  set: (val: string | number) => druidOptionsModule.setDruidLevel(val),
 });
 
 const selectedItems = computed({
