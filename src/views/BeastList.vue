@@ -1,7 +1,7 @@
 <template>
   <div class="beast-list">
     <beast-list-item
-      v-for="(beast, index) in list"
+      v-for="(beast, index) in beastModule.availableBeasts"
       :key="index"
       :beast="beast"
     />
@@ -9,13 +9,11 @@
 </template>
 
 <script setup lang="ts">
-import type { IBeast } from '@/types/IBeast';
-
-import monsterManualBeasts from '@/assets/books/monster-manual.json';
+import { useBeastsStore } from '@/stores/beasts';
 
 import BeastListItem from '@/components/BeastListItem.vue';
 
-const list = monsterManualBeasts as IBeast[];
+const beastModule = useBeastsStore();
 </script>
 
 <style scoped lang="scss">
