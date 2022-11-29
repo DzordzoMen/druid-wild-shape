@@ -2215,5 +2215,324 @@
         "description": "Ranged Weapon Attack: +5 to hit, reach 30/60 ft., one creature. The target is restrained by webbing As an action, the restrained target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage)."
       }
     ]
+  },
+  {
+    "name": "Giant Toad",
+    "hitPoints": 39,
+    "hitPointsInfo": "6d10+6",
+    "armorClass": 11,
+    "challenge": "1",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 20
+      },
+      {
+        "name": "Swim",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "30 ft."
+      }
+    ],
+    "passivePerception": 10,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 15,
+      "dexterity": 13,
+      "constitution": 13,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 3
+    },
+    "traits": [
+      {
+        "name": "Amphibious",
+        "description": "The toad can breathe air and water"
+      },
+      {
+        "name": "Standing Leap",
+        "description": "The toad's long jump is up to 20 ft. and its high jump is up to 10 ft., with or without a running start."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: (1d10 + 2) piercing damage plus (1d10)poison damage. The target is grappled (escape dc 13) Until this grapple ends, the target is restrained, and the toad can't bite another target"
+      },
+      {
+        "name": "Swallow",
+        "description": "The toad makes one bite attack against a Medium or smaller target it is grappling. If the attack hits, the target is swallowed, and the grapple ends. The swallowed target is blinded and restrained, it has total cover against attacks and other effects outside the toad, and it takes 10 (3d6) acid damage at the start of each of the toad's turns. The toad can have only one target swallowed at a time. If the toad dies, a swallowed creature is no longer restrained by it and can escape from the corpse using 5 feet of movement, exiting prone."
+      }
+    ]
+  },
+  {
+    "name": "Giant Vulture",
+    "description": "A giant Vulture has advanced Intelligence and a malevolent bent. Unlike its smaller kin, it will Attack a wounded creature to hasten its end. Giant vultures have been known to haunt a thirsty, starving creature for days to enjoy its suffering.",
+    "hitPoints": 22,
+    "hitPointsInfo": "3d10+6",
+    "armorClass": 10,
+    "challenge": "1",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 10
+      },
+      {
+        "name": "Fly",
+        "valueInFt": 60
+      }
+    ],
+    "size": "Large",
+    "alignment": "NE",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+3"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 15,
+      "dexterity": 10,
+      "constitution": 15,
+      "intelligence": 6,
+      "wisdom": 12,
+      "charisma": 7
+    },
+    "traits": [
+      {
+        "name": "Keen Sight and Smell",
+        "description": "The vulture has advantage on Wisdom (Perception) checks that rely on sight or smell."
+      },
+      {
+        "name": "Pack Tactics",
+        "description": "The vulture has advantage on an attack roll against a creature if at least one of the vulture's allies is within 5 ft. of the creature and the ally isn't incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The vulture makes two attacks: one with its beak and one with its talons."
+      },
+      {
+        "name": "Beak",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: (2d4 + 2) piercing damage."
+      },
+      {
+        "name": "Talons",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: (2d6 + 2) slashing damage."
+      }
+    ]
+  },
+  {
+    "name": "Giant Wasp",
+    "hitPoints": 13,
+    "hitPointsInfo": "3d8",
+    "armorClass": 12,
+    "challenge": "1/2",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 10
+      },
+      {
+        "name": "Fly",
+        "valueInFt": 50
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 10,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 10,
+      "dexterity": 14,
+      "constitution": 10,
+      "intelligence": 1,
+      "wisdom": 10,
+      "charisma": 3
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Sting",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: (1d6 + 2) piercing damage plus (3d6)poison damage. The target must make a DC 11 Constitution saving throw, taking the poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."
+      }
+    ]
+  },
+  {
+    "name": "Giant Weasel",
+    "hitPoints": 9,
+    "hitPointsInfo": "2d8",
+    "armorClass": 13,
+    "challenge": "1/8",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "60 ft."
+      },
+      {
+        "name": "Perception",
+        "value": "+3"
+      },
+      {
+        "name": "Stealth",
+        "value": "+5"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 11,
+      "dexterity": 16,
+      "constitution": 10,
+      "intelligence": 4,
+      "wisdom": 12,
+      "charisma": 5
+    },
+    "traits": [
+      {
+        "name": "Keen Hearing and Smell",
+        "description": "The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: (1d4 + 3) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Giant Wolf Spider",
+    "description": "Smaller than a giant Spider, a giant wolf Spider hunts prey across open ground or hides in a Burrow or crevice, or in a hidden cavity beneath debris.",
+    "hitPoints": 11,
+    "hitPointsInfo": "2d8+2",
+    "armorClass": 13,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      },
+      {
+        "name": "Climb",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "60 ft."
+      },
+      {
+        "name": "Blindsight",
+        "value": "10 ft."
+      },
+      {
+        "name": "Perception",
+        "value": "+3"
+      },
+      {
+        "name": "Stealth",
+        "value": "+7"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 12,
+      "dexterity": 16,
+      "constitution": 13,
+      "intelligence": 3,
+      "wisdom": 12,
+      "charisma": 4
+    },
+    "traits": [
+      {
+        "name": "Spider Climb",
+        "description": "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+      },
+      {
+        "name": "Web Sense",
+        "description": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web."
+      },
+      {
+        "name": "Web Walker",
+        "description": "The spider ignores movement restrictions caused by webbing."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one creature. Hit: (1d6 + 1) piercing damage plus (2d6)poison damage. The target must make a DC 11 Constitution saving throw, taking the poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."
+      }
+    ]
+  },
+  {
+    "name": "Goat",
+    "hitPoints": 4,
+    "hitPointsInfo": "1d8",
+    "armorClass": 10,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 10,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 12,
+      "dexterity": 10,
+      "constitution": 11,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 5
+    },
+    "traits": [
+      {
+        "name": "Charge",
+        "description": "If the goat moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 2 (1d4) bludgeoning damage. If the target is a creature, it must succeed on a DC 10 Strength saving throw or be knocked prone."
+      },
+      {
+        "name": "Sure-Footed",
+        "description": "The goat has advantage on Strength and Dexterity saving throws made against effects that would knock it prone."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Ram",
+        "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: (1d4 + 1) bludgeoning damage."
+      }
+    ]
   }
 ]
