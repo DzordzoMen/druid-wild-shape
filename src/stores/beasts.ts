@@ -20,6 +20,26 @@ export const useBeastsStore = defineStore('beasts', {
     voloBeasts: voloGuideToMonsters as IBeast[],
   }),
   getters: {
+    maxBeastChallenge(): number | null {
+      const druidOptionsModule = useDruidOptionsStore();
+      const { druidLevel, moonDruid } = druidOptionsModule;
+      const level = Number(druidLevel);
+
+      if (!level || level < 2) return null;
+
+      if (moonDruid) {
+        return Math.max(Math.floor(level / 3), 1);
+      } else {
+        switch (level) {
+          case 2:
+            return 1 / 4;
+          case 4:
+            return 1 / 2;
+          default:
+            return 1;
+        }
+      }
+    },
     availableBeastsFromSelectedBooks(state): IBeast[] {
       const { monsterManualBeasts, tomeOfFoesBeasts, voloBeasts } = state;
       const druidOptionsModule = useDruidOptionsStore();
