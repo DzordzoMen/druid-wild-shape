@@ -1277,5 +1277,213 @@
         "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: (1d4 + 2) piercing damage plus (3d6)poison damage. The target must succeed on a DC 11 Constitution saving throw or take the poison damage. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."
       }
     ]
+  },
+  {
+    "name": "Giant Constrictor Snake",
+    "hitPoints": 60,
+    "hitPointsInfo": "8d12+8",
+    "armorClass": 12,
+    "challenge": "2",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      },
+      {
+        "name": "Swim",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Huge",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Blindsight",
+        "value": "10 ft."
+      }
+    ],
+    "passivePerception": 12,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 19,
+      "dexterity": 14,
+      "constitution": 12,
+      "intelligence": 1,
+      "wisdom": 10,
+      "charisma": 3
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +6 to hit, reach 10 ft., one creature. Hit: (2d6 + 4) piercing damage."
+      },
+      {
+        "name": "Constrict",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one creature. Hit: (2d8 + 4) bludgeoning damage. The target is grappled (escape dc 16) Until this grapple ends, the creature is restrained, and the snake can't constrict another target"
+      }
+    ]
+  },
+  {
+    "name": "Giant Crab",
+    "hitPoints": 13,
+    "hitPointsInfo": "3d8",
+    "armorClass": 15,
+    "challenge": "1/8",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      },
+      {
+        "name": "Swim",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Blindsight",
+        "value": "30 ft."
+      }
+    ],
+    "passivePerception": 9,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 13,
+      "dexterity": 15,
+      "constitution": 11,
+      "intelligence": 1,
+      "wisdom": 9,
+      "charisma": 3
+    },
+    "traits": [
+      {
+        "name": "Amphibious",
+        "description": "The crab can breathe air and water."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Claw",
+        "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: (1d6 + 1) bludgeoning damage. The target is grappled (escape dc 11) The crab has two claws, each of which can grapple only one target"
+      }
+    ]
+  },
+  {
+    "name": "Giant Crocodile",
+    "hitPoints": 85,
+    "hitPointsInfo": "9d12+27",
+    "armorClass": 14,
+    "challenge": "5",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      },
+      {
+        "name": "Swim",
+        "valueInFt": 50
+      }
+    ],
+    "size": "Huge",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Stealth",
+        "value": "+5"
+      }
+    ],
+    "passivePerception": 10,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 21,
+      "dexterity": 9,
+      "constitution": 17,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 7
+    },
+    "traits": [
+      {
+        "name": "Hold Breath",
+        "description": "The crocodile can hold its breath for 30 minutes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The crocodile makes two attacks: one with its bite and one with its tail."
+      },
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +8 to hit, reach 5 ft., one target. Hit: (3d10 + 5) piercing damage. The target is grappled (escape dc 16) Until this grapple ends, the target is restrained, and the crocodile can't bite another target"
+      },
+      {
+        "name": "Tail",
+        "description": "Melee Weapon Attack: +8 to hit, reach 10 ft., one target not grappled by the crocodile. Hit: (2d8 + 5) bludgeoning damage. If the target is a creature, it must succeed on a DC 16 Strength saving throw or be knocked prone"
+      }
+    ]
+  },
+  {
+    "name": "Giant Eagle",
+    "description": "A giant eagle is a noble creature that speaks its own language and understands Speech in the Common tongue. A mated pair of giant eagles typically has up to four eggs or young in their nest (treat the young as normal eagles).",
+    "hitPoints": 26,
+    "hitPointsInfo": "4d10+4",
+    "armorClass": 13,
+    "challenge": "1",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 10
+      },
+      {
+        "name": "Fly",
+        "valueInFt": 80
+      }
+    ],
+    "size": "Large",
+    "alignment": "NG",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+4"
+      }
+    ],
+    "passivePerception": 14,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 16,
+      "dexterity": 17,
+      "constitution": 13,
+      "intelligence": 8,
+      "wisdom": 14,
+      "charisma": 10
+    },
+    "traits": [
+      {
+        "name": "Keen Sight",
+        "description": "The eagle has advantage on Wisdom (Perception) checks that rely on sight."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The eagle makes two attacks: one with its beak and one with its talons."
+      },
+      {
+        "name": "Beak",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: (1d6 + 3) piercing damage."
+      },
+      {
+        "name": "Talons",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: (2d6 + 3) slashing damage."
+      }
+    ]
   }
 ]
