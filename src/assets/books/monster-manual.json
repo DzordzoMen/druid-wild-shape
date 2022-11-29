@@ -1903,5 +1903,317 @@
         "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: (2d6 + 1) slashing damage."
       }
     ]
+  },
+  {
+    "name": "Giant Poisonous Snake",
+    "hitPoints": 11,
+    "hitPointsInfo": "2d8+2",
+    "armorClass": 14,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      },
+      {
+        "name": "Swim",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Blindsight",
+        "value": "10 ft."
+      },
+      {
+        "name": "Perception",
+        "value": "+2"
+      }
+    ],
+    "passivePerception": 12,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 10,
+      "dexterity": 18,
+      "constitution": 13,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 3
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +6 to hit, reach 10 ft., one target. Hit: (1d4 + 4) piercing damage plus (3d6)poison damage. The target must make a DC 11 Constitution saving throw, taking the poison damage on a failed save, or half as much damage on a successful one."
+      }
+    ]
+  },
+  {
+    "name": "Giant Rat",
+    "hitPoints": 7,
+    "hitPointsInfo": "2d6",
+    "armorClass": 12,
+    "challenge": "1/8",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Small",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "60 ft."
+      }
+    ],
+    "passivePerception": 10,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 7,
+      "dexterity": 15,
+      "constitution": 11,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 4
+    },
+    "traits": [
+      {
+        "name": "Keen Smell",
+        "description": "The rat has advantage on Wisdom (Perception) checks that rely on smell."
+      },
+      {
+        "name": "Pack Tactics",
+        "description": "The rat has advantage on an attack roll against a creature if at least one of the rat's allies is within 5 ft. of the creature and the ally isn't incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: (1d4 + 2) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Giant Scorpion",
+    "hitPoints": 52,
+    "hitPointsInfo": "7d10+14",
+    "armorClass": 15,
+    "challenge": "3",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Blindsight",
+        "value": "60 ft."
+      }
+    ],
+    "passivePerception": 9,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 15,
+      "dexterity": 13,
+      "constitution": 15,
+      "intelligence": 1,
+      "wisdom": 9,
+      "charisma": 3
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The scorpion makes three attacks: two with its claws and one with its sting."
+      },
+      {
+        "name": "Claw",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: (1d8 + 2) bludgeoning damage. The target is grappled (Escape DC 12) The scorpion has two claws, each of which can grapple only one target"
+      },
+      {
+        "name": "Sting",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: (1d10 + 2) piercing damage. The target must make a DC 12 Constitution saving throw, taking 22 (4d10) poison damage on a failed save, or half as much damage on a successful one."
+      }
+    ]
+  },
+  {
+    "name": "Giant Sea Horse",
+    "description": "Like their smaller kin, giant sea horses are shy, colorful fish with elongated bodies and curled tails. Aquatic elves train them as Mounts.",
+    "hitPoints": 16,
+    "hitPointsInfo": "3d10",
+    "armorClass": 13,
+    "challenge": "1/2",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 0
+      },
+      {
+        "name": "Swim",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 11,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 12,
+      "dexterity": 15,
+      "constitution": 11,
+      "intelligence": 2,
+      "wisdom": 12,
+      "charisma": 5
+    },
+    "traits": [
+      {
+        "name": "Charge",
+        "description": "If the sea horse moves at least 20 ft. straight toward a target and then hits it with a ram attack on the same turn, the target takes an extra 7 (2d6) bludgeoning damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone."
+      },
+      {
+        "name": "Water Breathing",
+        "description": "The sea horse can breathe only underwater."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Ram",
+        "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: (1d6 + 1) bludgeoning damage."
+      }
+    ]
+  },
+  {
+    "name": "Giant Shark",
+    "description": "A giant shark is 30 feet long and normally found in deep oceans. Utterly fearless, it preys on anything that crosses its path, including whales and ships.",
+    "hitPoints": 126,
+    "hitPointsInfo": "11d12+55",
+    "armorClass": 13,
+    "challenge": "5",
+    "speed": [
+      {
+        "name": "Swim",
+        "valueInFt": 50
+      }
+    ],
+    "size": "Huge",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Blindsight",
+        "value": "60 ft."
+      },
+      {
+        "name": "Perception",
+        "value": "+3"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 23,
+      "dexterity": 11,
+      "constitution": 21,
+      "intelligence": 1,
+      "wisdom": 10,
+      "charisma": 5
+    },
+    "traits": [
+      {
+        "name": "Blood Frenzy",
+        "description": "The shark has advantage on melee attack rolls against any creature that doesn't have all its hit points."
+      },
+      {
+        "name": "Water Breathing",
+        "description": "The shark can breathe only underwater."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +9 to hit, reach 5 ft., one target. Hit: (3d10 + 6) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Giant Spider",
+    "description": "To snare its prey, a giant Spider spins elaborate webs or shoots sticky strands of webbing from its abdomen. Giant spiders are most commonly found Underground, making their lairs on ceilings or in dark, web-filled crevices. Such lairs are often festooned with web cocoons holding past victims.",
+    "hitPoints": 26,
+    "hitPointsInfo": "4d10+4",
+    "armorClass": 14,
+    "challenge": "1",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      },
+      {
+        "name": "Climb",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "60 ft."
+      },
+      {
+        "name": "Blindsight",
+        "value": "10 ft."
+      },
+      {
+        "name": "Stealth",
+        "value": "+7"
+      }
+    ],
+    "passivePerception": 10,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 14,
+      "dexterity": 16,
+      "constitution": 12,
+      "intelligence": 2,
+      "wisdom": 11,
+      "charisma": 4
+    },
+    "traits": [
+      {
+        "name": "Spider Climb",
+        "description": "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+      },
+      {
+        "name": "Web Sense",
+        "description": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web."
+      },
+      {
+        "name": "Web Walker",
+        "description": "The spider ignores movement restrictions caused by webbing."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: (1d8 + 3) piercing damage plus (2d8)poison damage. The target must make a DC 11 Constitution saving throw, taking the poison damage on a failed save, or half as much damage on a successful one. If the poison damage reduces the target to 0 hit points, the target is stable but poisoned for 1 hour, even after regaining hit points, and is paralyzed while poisoned in this way."
+      },
+      {
+        "name": "Web (Recharge 5-6)",
+        "description": "Ranged Weapon Attack: +5 to hit, reach 30/60 ft., one creature. The target is restrained by webbing As an action, the restrained target can make a DC 12 Strength check, bursting the webbing on a success. The webbing can also be attacked and destroyed (AC 10; hp 5; vulnerability to fire damage; immunity to bludgeoning, poison, and psychic damage)."
+      }
+    ]
   }
 ]
