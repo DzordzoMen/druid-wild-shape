@@ -53,9 +53,10 @@ export const useBeastsStore = defineStore('beasts', {
 
       return result;
     },
-    // TODO filter
     availableBeasts(): IBeast[] {
-      return this.availableBeastsFromSelectedBooks;
+      const { availableBeastsFromSelectedBooks: books, maxBeastChallenge } = this;
+
+      return books.filter((beast) => eval(beast.challenge) <= (maxBeastChallenge || 999));
     },
   },
 });
