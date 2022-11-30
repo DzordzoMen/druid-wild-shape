@@ -54,6 +54,13 @@ export const useBeastsStore = defineStore('beasts', {
 
       return level >= 4;
     },
+    showElementals(): boolean {
+      const druidOptionsModule = useDruidOptionsStore();
+      const { druidLevel, moonDruid } = druidOptionsModule;
+      const level = Number(druidLevel);
+
+      return moonDruid && level >= 10;
+    },
     availableBeastsFromSelectedBooks(state): IBeast[] {
       const { monsterManualBeasts, tomeOfFoesBeasts, voloBeasts } = state;
       const druidOptionsModule = useDruidOptionsStore();
