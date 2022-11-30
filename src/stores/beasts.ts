@@ -6,6 +6,7 @@ import { useDruidOptionsStore } from './druidOptions';
 import mmBeasts from '@/assets/books/monster-manual.json';
 import tomeOfFoes from '@/assets/books/tome-of-foes.json';
 import voloGuideToMonsters from '@/assets/books/volos-guide-to-monsters.json';
+import { Move } from '@/types/enums/Move';
 
 interface State {
   monsterManualBeasts: IBeast[];
@@ -67,9 +68,30 @@ export const useBeastsStore = defineStore('beasts', {
       return result;
     },
     availableBeasts(): IBeast[] {
-      const { availableBeastsFromSelectedBooks: books, maxBeastChallenge } = this;
+      const {
+        availableBeastsFromSelectedBooks: beasts,
+        maxBeastChallenge,
+        showFlyingBeasts,
+        showSwimmingBeasts,
+      } = this;
 
-      return books.filter((beast) => eval(beast.challenge) <= (maxBeastChallenge || 999));
+      if (maxBeastChallenge === null) return beasts;
+
+      let filteredBeasts = beasts.filter(
+        (beast) => eval(beast.challenge) <= maxBeastChallenge
+      );
+
+      if (!showSwimmingBeasts)
+        filteredBeasts = filteredBeasts.filter(
+          (beast) => !beast.speed.map(({ name }) => name).includes(Move.Swim)
+        );
+
+      if (!showFlyingBeasts)
+        filteredBeasts = filteredBeasts.filter(
+          (beast) => !beast.speed.map(({ name }) => name).includes(Move.Fly)
+        );
+
+      return filteredBeasts;
     },
   },
 });
