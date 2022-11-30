@@ -31,7 +31,7 @@ const moveTypes = computed(() => {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  flex: 0 1 500px;
+  flex: 0 1 460px;
   background-color: #262626;
   border-radius: 4px;
   padding: 12px;
