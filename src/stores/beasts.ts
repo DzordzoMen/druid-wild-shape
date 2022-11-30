@@ -3,6 +3,7 @@ import { defineStore } from 'pinia';
 
 import { useDruidOptionsStore } from './druidOptions';
 
+import elementals from '@/assets/books/elementals.json';
 import mmBeasts from '@/assets/books/monster-manual.json';
 import tomeOfFoes from '@/assets/books/tome-of-foes.json';
 import voloGuideToMonsters from '@/assets/books/volos-guide-to-monsters.json';
@@ -12,6 +13,7 @@ interface State {
   monsterManualBeasts: IBeast[];
   tomeOfFoesBeasts: IBeast[];
   voloBeasts: IBeast[];
+  elementals: IBeast[];
 }
 
 export const useBeastsStore = defineStore('beasts', {
@@ -19,6 +21,7 @@ export const useBeastsStore = defineStore('beasts', {
     monsterManualBeasts: mmBeasts as IBeast[],
     tomeOfFoesBeasts: tomeOfFoes as IBeast[],
     voloBeasts: voloGuideToMonsters as IBeast[],
+    elementals: elementals as IBeast[],
   }),
   getters: {
     maxBeastChallenge(): number | null {
@@ -74,11 +77,13 @@ export const useBeastsStore = defineStore('beasts', {
 
       return result;
     },
-    availableBeasts(): IBeast[] {
+    availableBeasts(state): IBeast[] {
+      const { elementals } = state;
       const {
         availableBeastsFromSelectedBooks: beasts,
-        maxBeastChallenge,
+        showElementals,
         showFlyingBeasts,
+        maxBeastChallenge,
         showSwimmingBeasts,
       } = this;
 
@@ -97,6 +102,8 @@ export const useBeastsStore = defineStore('beasts', {
         filteredBeasts = filteredBeasts.filter(
           (beast) => !beast.speed.map(({ name }) => name).includes(Move.Fly)
         );
+
+      if (showElementals) filteredBeasts.push(...elementals);
 
       return filteredBeasts;
     },
