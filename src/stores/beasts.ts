@@ -24,6 +24,11 @@ export const useBeastsStore = defineStore('beasts', {
     elementals: elementals as IBeast[],
   }),
   getters: {
+    allBeasts(state): IBeast[] {
+      const { monsterManualBeasts, tomeOfFoesBeasts, voloBeasts, elementals } = state;
+
+      return [...monsterManualBeasts, ...tomeOfFoesBeasts, ...voloBeasts, ...elementals];
+    },
     maxBeastChallenge(): number | null {
       const druidOptionsModule = useDruidOptionsStore();
       const { druidLevel, moonDruid } = druidOptionsModule;
