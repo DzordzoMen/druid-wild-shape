@@ -1,5 +1,6 @@
 import type { IBeast } from '@/types/IBeast';
 import { defineStore } from 'pinia';
+import getNameLink from '@/utils/getNameLink';
 
 import { useDruidOptionsStore } from './druidOptions';
 
@@ -28,6 +29,10 @@ export const useBeastsStore = defineStore('beasts', {
       const { monsterManualBeasts, tomeOfFoesBeasts, voloBeasts, elementals } = state;
 
       return [...monsterManualBeasts, ...tomeOfFoesBeasts, ...voloBeasts, ...elementals];
+    },
+    getBeastDataByName(): (beastName: string) => IBeast | undefined {
+      return (beastName: string) =>
+        this.allBeasts.find(({ name }) => getNameLink(name) === beastName);
     },
     maxBeastChallenge(): number | null {
       const druidOptionsModule = useDruidOptionsStore();
