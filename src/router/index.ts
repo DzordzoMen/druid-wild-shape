@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router';
-// import HomeView from '../views/HomeView.vue';
+import BeastInfo from '../views/BeastInfo.vue';
 import BeastList from '../views/BeastList.vue';
 
 const router = createRouter({
@@ -9,6 +9,11 @@ const router = createRouter({
       path: '/',
       name: 'BeastList',
       component: BeastList,
+    },
+    {
+      path: '/beast/:beastName',
+      name: 'BeastInfo',
+      component: BeastInfo,
     },
   ],
 });
