@@ -1,6 +1,6 @@
 <template>
   <router-link
-    :to="{ name: 'BeastInfo', params: { beastName: 'test' } }"
+    :to="{ name: 'BeastInfo', params: { beastName: beastLink } }"
     class="beast-list-item"
   >
     <div class="beast-list-item__row">
@@ -18,9 +18,10 @@
 <script setup lang="ts">
 import type { IBeast } from '@/types/IBeast';
 
+import { computed } from 'vue';
 import { RouterLink } from 'vue-router';
 
-import { computed } from 'vue';
+import getNameLink from '@/utils/getNameLink';
 
 const props = defineProps<{
   beast: IBeast;
@@ -28,6 +29,10 @@ const props = defineProps<{
 
 const moveTypes = computed(() => {
   return props.beast.speed.map((item) => item.name).join(', ');
+});
+
+const beastLink = computed(() => {
+  return getNameLink(props.beast.name);
 });
 </script>
 
