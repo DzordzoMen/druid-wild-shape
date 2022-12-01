@@ -1,5 +1,8 @@
 <template>
-  <div class="beast-list-item">
+  <router-link
+    :to="{ name: 'BeastInfo', params: { beastName: 'test' } }"
+    class="beast-list-item"
+  >
     <div class="beast-list-item__row">
       <div>{{ beast.name }}</div>
       <div>CR: {{ beast.challenge }}</div>
@@ -9,11 +12,13 @@
       <div>AC: {{ beast.armorClass }}</div>
       <div>Move: {{ moveTypes }}</div>
     </div>
-  </div>
+  </router-link>
 </template>
 
 <script setup lang="ts">
 import type { IBeast } from '@/types/IBeast';
+
+import { RouterLink } from 'vue-router';
 
 import { computed } from 'vue';
 
@@ -33,9 +38,15 @@ const moveTypes = computed(() => {
   gap: 6px;
   flex: 0 1 460px;
   background-color: #262626;
+  text-decoration: none;
   border-radius: 4px;
   padding: 12px;
   color: #fff;
+  transition: box-shadow ease-in-out 0.36s;
+
+  &:hover {
+    box-shadow: 2px 4px 4px 0px rgb(255 255 255 / 20%);
+  }
 
   &__row {
     display: flex;
