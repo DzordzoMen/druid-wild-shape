@@ -11,6 +11,7 @@
     "composite": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
+    "lib": ["ES2021"],
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
