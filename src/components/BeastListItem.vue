@@ -47,10 +47,11 @@ const beastLink = computed(() => {
   border-radius: 4px;
   padding: 12px;
   color: #fff;
-  transition: box-shadow ease-in-out 0.36s;
+  border: 1px solid transparent;
+  transition: border-color ease-in-out 0.36s;
 
   &:hover {
-    box-shadow: 2px 4px 4px 0px rgb(159 168 218 / 26%);
+    border-color: rgb(159 168 218 / 60%);
   }
 
   &__row {
