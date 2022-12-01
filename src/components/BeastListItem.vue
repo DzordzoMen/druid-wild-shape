@@ -50,7 +50,7 @@ const beastLink = computed(() => {
   transition: box-shadow ease-in-out 0.36s;
 
   &:hover {
-    box-shadow: 2px 4px 4px 0px rgb(255 255 255 / 20%);
+    box-shadow: 2px 4px 4px 0px rgb(159 168 218 / 26%);
   }
 
   &__row {
