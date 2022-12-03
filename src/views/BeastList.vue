@@ -1,9 +1,9 @@
 <template>
   <div class="beast-list">
-    <beast-list-item
-      v-for="(beast, index) in beastModule.availableBeasts"
+    <beast-list-group
+      v-for="(group, index) in beastModule.groupedBeasts"
       :key="index"
-      :beast="beast"
+      :beast-group="group"
     />
   </div>
 </template>
@@ -11,7 +11,7 @@
 <script setup lang="ts">
 import { useBeastsStore } from '@/stores/beasts';
 
-import BeastListItem from '@/components/BeastListItem.vue';
+import BeastListGroup from '@/components/BeastListGroup.vue';
 
 const beastModule = useBeastsStore();
 </script>
@@ -22,7 +22,7 @@ const beastModule = useBeastsStore();
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 20px;
+  gap: 24px;
   margin: auto;
   max-width: 1020px;
 }
