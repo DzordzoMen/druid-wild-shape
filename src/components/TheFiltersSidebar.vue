@@ -28,7 +28,8 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onBeforeMount } from 'vue';
+import { computed, onBeforeMount } from 'vue';
+import { useFiltersStore } from '@/stores/filters';
 import { Move } from '@/types/enums/Move';
 import { Size } from '@/types/enums/Size';
 import { Environment } from '@/types/enums/Environment';
@@ -50,13 +51,27 @@ const availableEnvs: IChipGroupItem[] = Object.keys(Environment).map(
   (value): IChipGroupItem => ({ text: value, value })
 );
 
-const selectedMoves = ref<string[]>([]);
+const filtersModule = useFiltersStore();
 
-const selectedSizes = ref<string[]>([]);
+const search = computed({
+  get: () => filtersModule.search,
+  set: (val: string) => filtersModule.setSearch(val),
+});
 
-const selectedEnvs = ref<string[]>([]);
+const selectedMoves = computed({
+  get: () => filtersModule.selectedMoves,
+  set: (val: string[]) => filtersModule.setSelectedMoves(val),
+});
 
-const search = ref('');
+const selectedSizes = computed({
+  get: () => filtersModule.selectedSizes,
+  set: (val: string[]) => filtersModule.setSelectedSizes(val),
+});
+
+const selectedEnvs = computed({
+  get: () => filtersModule.selectedEnvs,
+  set: (val: string[]) => filtersModule.setSelectedEnvs(val),
+});
 
 onBeforeMount(() => {
   selectedSizes.value = availableSize.map((size) => size.value) as string[];
