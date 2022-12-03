@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="common-chip-group"
-    :class="{ 'common-chip-group--column': column }"
-  >
+  <div class="common-chip-group" :class="{ 'common-chip-group--column': column }">
     <common-chip
       @update:selected="clickHandler(item)"
       :selected="isChipSelected(item)"
