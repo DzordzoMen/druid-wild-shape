@@ -1,14 +1,15 @@
-import type { IBeast } from '@/types/IBeast';
 import { defineStore } from 'pinia';
-import getNameLink from '@/utils/getNameLink';
+import { Move } from '@/types/enums/Move';
+import type { IBeast } from '@/types/IBeast';
+import type { IGroupedBeasts } from '@/types/IGroupedBeasts';
 
 import { useDruidOptionsStore } from './druidOptions';
+import getNameLink from '@/utils/getNameLink';
 
 import elementals from '@/assets/books/elementals.json';
 import mmBeasts from '@/assets/books/monster-manual.json';
 import tomeOfFoes from '@/assets/books/tome-of-foes.json';
 import voloGuideToMonsters from '@/assets/books/volos-guide-to-monsters.json';
-import { Move } from '@/types/enums/Move';
 
 interface State {
   monsterManualBeasts: IBeast[];
@@ -116,6 +117,28 @@ export const useBeastsStore = defineStore('beasts', {
       if (showElementals) filteredBeasts.push(...elementals);
 
       return filteredBeasts;
+    },
+    groupedBeasts(): IGroupedBeasts[] {
+      const { availableBeasts } = this;
+      const groupedBeasts: IGroupedBeasts[] = [];
+
+      availableBeasts.forEach((beast) => {
+        const beastChallenge = beast.challenge;
+        const challengeIndex = groupedBeasts.findIndex(
+          (group) => group.challenge === beastChallenge
+        );
+
+        if (challengeIndex === -1) {
+          groupedBeasts.push({
+            challenge: beastChallenge,
+            beasts: [beast],
+          });
+        } else {
+          groupedBeasts[challengeIndex].beasts.push(beast);
+        }
+      });
+
+      return groupedBeasts.sort((a, b) => eval(a.challenge) - eval(b.challenge));
     },
   },
 });
