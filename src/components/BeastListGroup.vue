@@ -34,9 +34,17 @@ defineProps<{
     flex: 1 1 100%;
     display: flex;
     font-size: 18px;
+    gap: 10px;
     font-weight: 600;
     justify-content: center;
     align-items: center;
+
+    &::after,
+    &::before {
+      content: '';
+      border-top: 2px solid #fff;
+      width: 100px;
+    }
   }
 }
 </style>
