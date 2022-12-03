@@ -121,10 +121,22 @@ export const useBeastsStore = defineStore('beasts', {
     },
     filteredBeasts(): IBeast[] {
       const filtersModule = useFiltersStore();
-      const { selectedSizes } = filtersModule;
+      const { selectedSizes, selectedMoves, selectedEnvs, search } = filtersModule;
       let filteredBeasts = this.availableBeasts;
 
       filteredBeasts = filteredBeasts.filter(({ size }) => selectedSizes.includes(size));
+
+      filteredBeasts = filteredBeasts.filter(({ speed }) =>
+        speed.map((item) => item.name).some((val) => selectedMoves.includes(val))
+      );
+      // TODO add envs to beasts
+      // filteredBeasts = filteredBeasts.filter(({ environment }) =>
+      //   environment.some((val) => selectedEnvs.includes(val))
+      // );
+
+      filteredBeasts = filteredBeasts.filter((beast) =>
+        JSON.stringify(beast).includes(search)
+      );
 
       return filteredBeasts;
     },
