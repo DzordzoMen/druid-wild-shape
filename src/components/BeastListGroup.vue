@@ -34,6 +34,7 @@ defineProps<{
     flex: 1 1 100%;
     display: flex;
     font-size: 18px;
+    letter-spacing: 4px;
     gap: 10px;
     font-weight: 600;
     justify-content: center;
