@@ -4,6 +4,7 @@ import type { IBeast } from '@/types/IBeast';
 import type { IGroupedBeasts } from '@/types/IGroupedBeasts';
 
 import { useDruidOptionsStore } from './druidOptions';
+import { useFiltersStore } from './filters';
 import getNameLink from '@/utils/getNameLink';
 
 import elementals from '@/assets/books/elementals.json';
@@ -118,11 +119,20 @@ export const useBeastsStore = defineStore('beasts', {
 
       return filteredBeasts;
     },
+    filteredBeasts(): IBeast[] {
+      const filtersModule = useFiltersStore();
+      const { selectedSizes } = filtersModule;
+      let filteredBeasts = this.availableBeasts;
+
+      filteredBeasts = filteredBeasts.filter(({ size }) => selectedSizes.includes(size));
+
+      return filteredBeasts;
+    },
     groupedBeasts(): IGroupedBeasts[] {
-      const { availableBeasts } = this;
+      const { filteredBeasts } = this;
       const groupedBeasts: IGroupedBeasts[] = [];
 
-      availableBeasts.forEach((beast) => {
+      filteredBeasts.forEach((beast) => {
         const beastChallenge = beast.challenge;
         const challengeIndex = groupedBeasts.findIndex(
           (group) => group.challenge === beastChallenge
