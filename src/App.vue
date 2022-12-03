@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { RouterView } from 'vue-router';
-import CommonSidebar from './components/CommonSidebar.vue';
+import FiltersSidebar from './components/TheFiltersSidebar.vue';
 import OptionsSidebar from './components/TheOptionsSidebar.vue';
 
-const showLeftSidebar = ref(false);
+const showLeftSidebar = ref(true);
 const showRightSidebar = ref(true);
 
 function test(): void {
@@ -18,7 +18,7 @@ function test(): void {
     <button @click="showRightSidebar = !showRightSidebar">Right</button>
   </header>
 
-  <common-sidebar :show="showLeftSidebar" left />
+  <filters-sidebar :show="showLeftSidebar" />
   <options-sidebar :show="showRightSidebar" />
 
   <main
@@ -46,8 +46,7 @@ main {
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
     margin-left 0.6s cubic-bezier(0.4, 0, 0.2, 1),
     margin-right 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-    max-width 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-    width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    max-width 0.6s cubic-bezier(0.4, 0, 0.2, 1), width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 
   &::-webkit-scrollbar {
     display: none;
