@@ -36,7 +36,7 @@ header {
   height: 56px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0px 2px rgba(0, 0, 0, 0.9) !important;
   background-color: #18181b;
-  z-index: 1;
+  z-index: 8;
 }
 
 // #7668cb
