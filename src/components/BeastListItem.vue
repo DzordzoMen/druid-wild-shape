@@ -87,4 +87,10 @@ const beastLink = computed(() => {
     }
   }
 }
+
+@media (max-width: 820px) {
+  .beast-list-item {
+    flex: 0 1 360px;
+  }
+}
 </style>
