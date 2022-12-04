@@ -3,6 +3,7 @@
     class="common-chip"
     :class="{ 'common-chip--selected': selected }"
     tabindex="0"
+    role="button"
     @keypress="$emit('update:selected', !selected)"
     @click="$emit('update:selected', !selected)"
   >
