@@ -22,12 +22,11 @@ defineProps<{
 
 <style scoped lang="scss">
 .beast-list-group {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-between;
   gap: 20px;
   width: 100%;
+  display: grid;
+  grid-template-rows: 30px 1fr;
+  grid-template-columns: repeat(2, 1fr);
 
   &__title {
     color: #fff;
@@ -39,12 +38,23 @@ defineProps<{
     font-weight: 600;
     justify-content: center;
     align-items: center;
+    grid-column: span 2;
 
     &::after,
     &::before {
       content: '';
       border-top: 2px solid #fff;
       width: 100px;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .beast-list-group {
+    grid-template-columns: repeat(1, 1fr);
+
+    &__title {
+      grid-column: span 1;
     }
   }
 }
