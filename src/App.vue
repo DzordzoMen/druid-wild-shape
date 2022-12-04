@@ -39,6 +39,9 @@ header {
   z-index: 1;
 }
 
+// #7668cb
+// #8678d7
+
 main {
   height: calc(100vh - 56px);
   padding: 12px;
@@ -53,13 +56,15 @@ main {
   }
 }
 
-.main-file {
-  &--has-sidebar-left {
-    margin-left: 240px;
-  }
+@media (min-width: 1000px) {
+  .main-file {
+    &--has-sidebar-left {
+      margin-left: 240px;
+    }
 
-  &--has-sidebar-right {
-    margin-right: 240px;
+    &--has-sidebar-right {
+      margin-right: 240px;
+    }
   }
 }
 </style>
