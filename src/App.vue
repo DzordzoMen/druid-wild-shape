@@ -37,8 +37,15 @@ function toggleLeftSidebar(): void {
     <icon-close v-else @click="showRightSidebar = false" />
   </header>
 
-  <filters-sidebar :show="showFiltersSidebar" />
-  <options-sidebar :show="showOptionsSidebar" />
+  <filters-sidebar
+    :show="showFiltersSidebar"
+    @update:show="(val) => (showLeftSidebar = val)"
+  />
+
+  <options-sidebar
+    :show="showOptionsSidebar"
+    @update:show="(val) => (showRightSidebar = val)"
+  />
 
   <main
     :class="{
