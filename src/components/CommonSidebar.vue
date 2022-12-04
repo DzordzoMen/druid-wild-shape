@@ -51,15 +51,17 @@ const transitionName = computed(() => {
   height: calc(100vh - 56px);
   width: 240px;
   background-color: #262626;
-  z-index: 6; // on mobile device
+  z-index: 6;
   padding: 12px;
 
   &--left {
     left: 0;
+    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.9), 0 0px 4px rgba(0, 0, 0, 0.9);
   }
 
   &--right {
     right: 0;
+    box-shadow: -1px 0 4px rgba(0, 0, 0, 0.9), 0 0px 4px rgba(0, 0, 0, 0.9);
   }
 }
 
