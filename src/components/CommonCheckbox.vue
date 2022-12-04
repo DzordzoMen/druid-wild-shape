@@ -1,13 +1,7 @@
 <template>
   <div class="common-checkbox common-checkbox__wrapper">
     <div class="common-checkbox__box">
-      <input
-        v-model="value"
-        v-bind="$attrs"
-        type="checkbox"
-        :name="id"
-        :id="id"
-      />
+      <input v-model="value" v-bind="$attrs" type="checkbox" :name="id" :id="id" />
 
       <div class="common-checkbox__box-element" @click="value = !value" />
     </div>
