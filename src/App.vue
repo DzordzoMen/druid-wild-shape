@@ -1,11 +1,23 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import { useRoute } from 'vue-router';
 import { RouterView } from 'vue-router';
+
 import FiltersSidebar from './components/TheFiltersSidebar.vue';
 import OptionsSidebar from './components/TheOptionsSidebar.vue';
 
 const showLeftSidebar = ref(true);
 const showRightSidebar = ref(true);
+
+const route = useRoute();
+
+const showFiltersSidebar = computed(() => {
+  return route.name === 'BeastInfo' ? false : showLeftSidebar.value;
+});
+
+const showOptionsSidebar = computed(() => {
+  return route.name === 'BeastInfo' ? false : showRightSidebar.value;
+});
 
 function test(): void {
   showLeftSidebar.value = !showLeftSidebar.value;
@@ -18,13 +30,13 @@ function test(): void {
     <button @click="showRightSidebar = !showRightSidebar">Right</button>
   </header>
 
-  <filters-sidebar :show="showLeftSidebar" />
-  <options-sidebar :show="showRightSidebar" />
+  <filters-sidebar :show="showFiltersSidebar" />
+  <options-sidebar :show="showOptionsSidebar" />
 
   <main
     :class="{
-      'main-file--has-sidebar-left': showLeftSidebar,
-      'main-file--has-sidebar-right': showRightSidebar,
+      'main-file--has-sidebar-left': showFiltersSidebar,
+      'main-file--has-sidebar-right': showOptionsSidebar,
     }"
   >
     <RouterView />
