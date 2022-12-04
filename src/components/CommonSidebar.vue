@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, ref } from 'vue';
+import { onClickOutside } from '@vueuse/core';
 
 const props = defineProps({
   show: {
@@ -19,6 +20,10 @@ const props = defineProps({
   },
 });
 
+const emit = defineEmits(['update:show']);
+
+const sidebarRef = ref(null);
+
 const transitionName = computed(() => {
   const { left, right } = props;
 
@@ -27,6 +32,10 @@ const transitionName = computed(() => {
 
   return 'left';
 });
+
+onClickOutside(sidebarRef, () => {
+  emit('update:show', false);
+});
 </script>
 
 <template>
@@ -34,6 +43,7 @@ const transitionName = computed(() => {
     <div
       class="sidebar"
       v-show="show"
+      ref="sidebarRef"
       :class="{
         'sidebar--left': left,
         'sidebar--right': right,
