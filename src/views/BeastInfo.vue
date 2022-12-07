@@ -33,6 +33,23 @@
           </li>
         </ul>
       </div>
+
+      <div class="beast-info-details-item">
+        <div class="beast-info-details-item__title">Skills</div>
+        <div class="beast-info-details-item__content">
+          <ul>
+            <li v-for="(skill, index) in beastInfo?.skills" :key="index">
+              <b>{{ skill.name }}</b>
+              {{ skill?.value }}
+            </li>
+            <li>
+              <b>Passive perception</b>
+              {{ beastInfo?.passivePerception }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
       {{ beastInfo }}
     </div>
   </div>
@@ -141,8 +158,11 @@ const beastSpeed = computed((): string | null => {
     background-color: #262626;
 
     &__title {
-      padding-top: 12px;
+      padding: 12px 4px 0 12px;
       width: fit-content;
+      border-bottom-right-radius: 4px 2px;
+      font-size: 18px;
+      font-weight: 600;
       border-bottom: 2px solid #fff;
     }
 
