@@ -31,6 +31,14 @@
             <b>Speed</b>
             {{ beastSpeed }}
           </li>
+          <li v-if="beastEnvironments">
+            <b>Environments</b>
+            {{ beastEnvironments }}
+          </li>
+          <li>
+            <b>Challenge</b>
+            {{ beastInfo?.challenge }}
+          </li>
         </ul>
       </div>
 
@@ -45,6 +53,18 @@
             <li>
               <b>Passive perception</b>
               {{ beastInfo?.passivePerception }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="beast-info-details-item">
+        <div class="beast-info-details-item__title">Actions</div>
+        <div class="beast-info-details-item__content">
+          <ul>
+            <li v-for="(action, index) in beastInfo?.actions" :key="index">
+              <b>{{ action?.name }}</b>
+              {{ action?.description }}
             </li>
           </ul>
         </div>
@@ -97,6 +117,10 @@ const beastAbilities = computed((): AbilityItem[] => {
 
 const beastDescription = computed((): string | undefined => {
   return beastInfo?.value?.description ?? undefined;
+});
+
+const beastEnvironments = computed((): string | null => {
+  return beastInfo.value?.environment?.join(',') ?? null;
 });
 
 const beastSpeed = computed((): string | null => {
