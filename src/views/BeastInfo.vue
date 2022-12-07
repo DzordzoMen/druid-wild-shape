@@ -207,6 +207,10 @@ const beastSpeed = computed((): string | null => {
 
       & b {
         font-weight: 600;
+
+        &::after {
+          content: ':';
+        }
       }
 
       & ul {
