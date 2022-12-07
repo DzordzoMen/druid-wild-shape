@@ -58,6 +58,18 @@
         </div>
       </div>
 
+      <div class="beast-info-details-item" v-if="beastInfo?.traits?.length">
+        <div class="beast-info-details-item__title">Traits</div>
+        <div class="beast-info-details-item__content">
+          <ul>
+            <li v-for="(trait, index) in beastInfo?.traits" :key="index">
+              <b>{{ trait?.name }}</b>
+              {{ trait?.description }}
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <div class="beast-info-details-item">
         <div class="beast-info-details-item__title">Actions</div>
         <div class="beast-info-details-item__content">
@@ -70,7 +82,7 @@
         </div>
       </div>
 
-      {{ beastInfo }}
+      <!-- {{ beastInfo }} -->
     </div>
   </div>
 </template>
