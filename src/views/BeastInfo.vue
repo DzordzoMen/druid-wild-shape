@@ -5,6 +5,7 @@
       <div>{{ beastSizeAndAlignment }}</div>
       <div v-if="beastDescription">{{ beastDescription }}</div>
     </div>
+
     <div class="beast-info__abilities">
       <beast-ability-item
         v-for="(ability, index) in beastAbilities"
@@ -13,7 +14,27 @@
         :value="ability.baseValue"
       />
     </div>
-    <div class="beast-info__details">{{ beastInfo }}</div>
+
+    <div class="beast-info__details">
+      <div class="beast-info-details-item beast-info-details-item__content">
+        <ul>
+          <li>
+            <b>Armor class</b>
+            {{ beastInfo?.armorClass }}
+          </li>
+          <li>
+            <b>Hit points</b>
+            {{ beastInfo?.hitPoints }}
+            ({{ beastInfo?.hitPointsInfo }})
+          </li>
+          <li>
+            <b>Speed</b>
+            {{ beastSpeed }}
+          </li>
+        </ul>
+      </div>
+      {{ beastInfo }}
+    </div>
   </div>
 </template>
 
@@ -60,6 +81,14 @@ const beastAbilities = computed((): AbilityItem[] => {
 const beastDescription = computed((): string | undefined => {
   return beastInfo?.value?.description ?? undefined;
 });
+
+const beastSpeed = computed((): string | null => {
+  return (
+    beastInfo.value?.speed
+      ?.map(({ name, valueInFt }) => `${name} ${valueInFt} ft.`)
+      ?.join(', ') ?? null
+  );
+});
 </script>
 
 <style scoped lang="scss">
@@ -105,6 +134,33 @@ const beastDescription = computed((): string | undefined => {
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+
+  &-details-item {
+    border-radius: 8px;
+    background-color: #262626;
+
+    &__title {
+      padding-top: 12px;
+      width: fit-content;
+      border-bottom: 2px solid #fff;
+    }
+
+    &__content {
+      padding: 12px;
+
+      & b {
+        font-weight: 600;
+      }
+
+      & ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
   }
 }
 </style>
