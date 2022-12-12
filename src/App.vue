@@ -21,12 +21,16 @@ const breakpoints = useBreakpoints({
   desktop: 1280,
 });
 
+const userIsOnBeastPage = computed((): boolean => {
+  return route.name === 'BeastInfo';
+});
+
 const showFiltersSidebar = computed(() => {
-  return route.name === 'BeastInfo' ? false : showLeftSidebar.value;
+  return userIsOnBeastPage.value ? false : showLeftSidebar.value;
 });
 
 const showOptionsSidebar = computed(() => {
-  return route.name === 'BeastInfo' ? false : showRightSidebar.value;
+  return userIsOnBeastPage.value ? false : showRightSidebar.value;
 });
 
 const showIcons = computed((): boolean => {
@@ -40,17 +44,27 @@ function toggleLeftSidebar(): void {
 
 <template>
   <header>
-    <template v-if="showIcons">
+    <template v-if="showIcons && !userIsOnBeastPage">
       <icon-filter @click="toggleLeftSidebar()" />
     </template>
 
     <div>Wild Shape</div>
 
-    <template v-if="showIcons">
+    <template v-if="showIcons && !userIsOnBeastPage">
       <icon-options v-if="!showRightSidebar" @click="showRightSidebar = true" />
       <icon-close v-else @click="showRightSidebar = false" />
     </template>
   </header>
+
+  <main
+    :class="{
+      'main-file--has-sidebar-left': showFiltersSidebar,
+      'main-file--has-sidebar-right': showOptionsSidebar,
+      'main-file--hide-sidebars': userIsOnBeastPage,
+    }"
+  >
+    <RouterView />
+  </main>
 
   <filters-sidebar
     :show="showFiltersSidebar"
@@ -61,15 +75,6 @@ function toggleLeftSidebar(): void {
     :show="showOptionsSidebar"
     @update:show="(val) => (showRightSidebar = val)"
   />
-
-  <main
-    :class="{
-      'main-file--has-sidebar-left': showFiltersSidebar,
-      'main-file--has-sidebar-right': showOptionsSidebar,
-    }"
-  >
-    <RouterView />
-  </main>
 </template>
 
 <style scoped lang="scss">
@@ -113,6 +118,12 @@ main {
     max-width 0.6s cubic-bezier(0.4, 0, 0.2, 1), width 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 
   &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.main-file {
+  &--hide-sidebars ~ .sidebar {
     display: none;
   }
 }
