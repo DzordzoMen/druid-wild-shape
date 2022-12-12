@@ -155,11 +155,11 @@ useTitle(`${beastInfo?.value?.name} | D&D 5 - Druid wild shape`);
   display: grid;
   gap: 20px;
   grid-template-columns: auto 80px;
-  grid-template-rows: repeat(auto-fill, minmax(min(80px, 100%), 80px));
 
   &__name {
     padding: 12px;
     border-radius: 8px;
+    grid-row: 1 / 2;
     background-color: #262626;
     display: flex;
     flex-direction: column;
@@ -180,9 +180,10 @@ useTitle(`${beastInfo?.value?.name} | D&D 5 - Druid wild shape`);
 
   &__abilities {
     grid-column: 2;
-    grid-row: 1 / 3;
+    grid-row: 1 / 4;
     display: flex;
     flex-direction: row;
+    align-content: flex-start;
     flex-wrap: wrap;
     gap: 20px;
   }
