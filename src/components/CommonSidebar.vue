@@ -1,6 +1,13 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
 import { onClickOutside } from '@vueuse/core';
+import { useBreakpoints } from '@vueuse/core';
+
+const breakpoints = useBreakpoints({
+  tablet: 640,
+  laptop: 1024,
+  desktop: 1280,
+});
 
 const props = defineProps({
   show: {
@@ -34,7 +41,7 @@ const transitionName = computed(() => {
 });
 
 onClickOutside(sidebarRef, () => {
-  emit('update:show', false);
+  if (breakpoints.smallerOrEqual('tablet').value) emit('update:show', false);
 });
 </script>
 
