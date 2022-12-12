@@ -155,6 +155,7 @@ useTitle(`${beastInfo?.value?.name} | D&D 5 - Druid wild shape`);
   display: grid;
   gap: 20px;
   grid-template-columns: auto 80px;
+  grid-template-rows: repeat(auto-fill, minmax(min(80px, 100%), 80px));
 
   &__name {
     padding: 12px;
