@@ -90,6 +90,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
+import { useTitle } from '@vueuse/core';
 import { useBeastsStore } from '@/stores/beasts';
 import type { IBeast } from '@/types/IBeast';
 import { Alignment } from '@/types/enums/Alignment';
@@ -142,6 +143,8 @@ const beastSpeed = computed((): string | null => {
       ?.join(', ') ?? null
   );
 });
+
+useTitle(`${beastInfo?.value?.name} | D&D 5 - Druid wild shape`);
 </script>
 
 <style scoped lang="scss">
