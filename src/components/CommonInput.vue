@@ -69,7 +69,7 @@ const value = computed({
   & > input {
     color: inherit;
     background-color: inherit;
-    border: 1px solid rgba($color: #fff, $alpha: 0.3);
+    border: 2px solid rgba($color: #fff, $alpha: 0.3);
     border-radius: 4px;
     font-size: 1rem;
     padding: 8px 12px;
