@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue';
+import { ref, computed, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { RouterView } from 'vue-router';
 import { useBreakpoints } from '@vueuse/core';
@@ -37,19 +37,28 @@ const showIcons = computed((): boolean => {
   return breakpoints.smallerOrEqual('tablet').value;
 });
 
-function toggleLeftSidebar(): void {
-  showLeftSidebar.value = !showLeftSidebar.value;
+function toggleLeftSidebar(value: boolean): void {
+  showLeftSidebar.value = value;
 }
 
 function toggleRightSidebar(value: boolean): void {
   showRightSidebar.value = value;
 }
+
+watch(
+  showIcons,
+  (value: boolean) => {
+    toggleLeftSidebar(!value);
+    toggleRightSidebar(!value);
+  },
+  { immediate: true }
+);
 </script>
 
 <template>
   <header>
     <template v-if="showIcons && !userIsOnBeastPage">
-      <icon-filter @click="toggleLeftSidebar()" />
+      <icon-filter @click="toggleLeftSidebar(true)" />
     </template>
 
     <div>Wild Shape</div>
