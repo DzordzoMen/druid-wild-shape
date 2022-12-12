@@ -62,7 +62,13 @@ watch(
       <icon-close v-else @click="toggleLeftSidebar(false)" />
     </template>
 
-    <div>Wild Shape</div>
+    <router-link
+      :disabled="!userIsOnBeastPage"
+      :aria-disabled="!userIsOnBeastPage"
+      :to="{ name: 'BeastList' }"
+    >
+      Wild Shape
+    </router-link>
 
     <template v-if="showIcons && !userIsOnBeastPage">
       <icon-options v-if="!showRightSidebar" @click="toggleRightSidebar(true)" />
@@ -109,10 +115,16 @@ header {
     cursor: pointer;
   }
 
-  & > div {
+  & > a {
     color: #fff;
+    text-decoration: none;
+    cursor: pointer;
     font-size: 24px;
     font-weight: 600;
+
+    &[disabled='true'] {
+      cursor: default;
+    }
   }
 }
 // background: linear-gradient(to bottom, #000000 0%, #390967 20%, #574595 100%) !important
