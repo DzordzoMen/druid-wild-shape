@@ -55,8 +55,8 @@ const value = computed({
 
       &:checked {
         & ~ .common-checkbox__box-element {
-          border-color: #9fa8da;
-          background-color: #9fa8da;
+          border-color: var(--primary-color);
+          background-color: var(--primary-color);
 
           &::after {
             content: '';
@@ -67,7 +67,7 @@ const value = computed({
       &:hover,
       &:focus-visible {
         & ~ .common-checkbox__box-element {
-          border-color: #9fa8da;
+          border-color: var(--primary-color);
         }
       }
     }
@@ -92,8 +92,8 @@ const value = computed({
         height: 10px;
         transform: rotate(45deg);
         transform-origin: 70% 45%;
-        border-bottom: 2px solid #262626;
-        border-right: 2px solid #262626;
+        border-bottom: 2px solid #fff;
+        border-right: 2px solid #fff;
       }
     }
   }

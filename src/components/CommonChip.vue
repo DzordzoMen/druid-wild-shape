@@ -43,12 +43,12 @@ defineEmits<{
   &:hover,
   &:focus-visible {
     outline: none;
-    border-color: #9fa8da;
+    border-color: var(--primary-color);
   }
 
   &--selected {
-    background-color: #9fa8da;
-    color: #262626;
+    background-color: var(--primary-color);
+    color: #fff;
 
     &:hover,
     &:focus-visible {

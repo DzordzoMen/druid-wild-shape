@@ -77,7 +77,7 @@ const value = computed({
 
     &:focus,
     &:hover {
-      border-color: #9fa8da;
+      border-color: var(--primary-color);
       outline: none;
     }
 

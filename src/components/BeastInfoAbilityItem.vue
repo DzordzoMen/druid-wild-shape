@@ -78,7 +78,7 @@ const abilityModifier = computed((): string => {
     font-size: 14px;
     border-top-left-radius: inherit;
     border-top-right-radius: inherit;
-    background-color: #9fa8da;
+    background-color: var(--primary-color);
   }
 }
 </style>
