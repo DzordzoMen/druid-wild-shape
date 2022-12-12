@@ -40,6 +40,10 @@ const showIcons = computed((): boolean => {
 function toggleLeftSidebar(): void {
   showLeftSidebar.value = !showLeftSidebar.value;
 }
+
+function toggleRightSidebar(value: boolean): void {
+  showRightSidebar.value = value;
+}
 </script>
 
 <template>
@@ -51,8 +55,8 @@ function toggleLeftSidebar(): void {
     <div>Wild Shape</div>
 
     <template v-if="showIcons && !userIsOnBeastPage">
-      <icon-options v-if="!showRightSidebar" @click="showRightSidebar = true" />
-      <icon-close v-else @click="showRightSidebar = false" />
+      <icon-options v-if="!showRightSidebar" @click="toggleRightSidebar(true)" />
+      <icon-close v-else @click="toggleRightSidebar(false)" />
     </template>
   </header>
 
