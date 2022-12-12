@@ -58,7 +58,8 @@ watch(
 <template>
   <header>
     <template v-if="showIcons && !userIsOnBeastPage">
-      <icon-filter @click="toggleLeftSidebar(true)" />
+      <icon-filter v-if="!showLeftSidebar" @click="toggleLeftSidebar(true)" />
+      <icon-close v-else @click="toggleLeftSidebar(false)" />
     </template>
 
     <div>Wild Shape</div>
