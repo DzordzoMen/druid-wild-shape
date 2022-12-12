@@ -28,22 +28,22 @@ const abilityModifier = computed((): string => {
   const isValueBetween = (min: number, max: number, value: number) =>
     value >= min && value <= max;
 
-  if (value === 1) return '-5';
-  if (isValueBetween(2, 3, value)) return '-4';
-  if (isValueBetween(4, 5, value)) return '-3';
-  if (isValueBetween(6, 7, value)) return '-2';
-  if (isValueBetween(8, 9, value)) return '-1';
-  if (isValueBetween(10, 11, value)) return '+0';
-  if (isValueBetween(12, 13, value)) return '+1';
-  if (isValueBetween(14, 15, value)) return '+2';
-  if (isValueBetween(16, 17, value)) return '+3';
-  if (isValueBetween(18, 19, value)) return '+4';
-  if (isValueBetween(20, 21, value)) return '+5';
-  if (isValueBetween(22, 23, value)) return '+6';
-  if (isValueBetween(24, 25, value)) return '+7';
-  if (isValueBetween(26, 27, value)) return '+8';
-  if (isValueBetween(28, 29, value)) return '+9';
-  return '+10';
+  if (value === 1) return '- 5';
+  if (isValueBetween(2, 3, value)) return '- 4';
+  if (isValueBetween(4, 5, value)) return '- 3';
+  if (isValueBetween(6, 7, value)) return '- 2';
+  if (isValueBetween(8, 9, value)) return '- 1';
+  if (isValueBetween(10, 11, value)) return '+ 0';
+  if (isValueBetween(12, 13, value)) return '+ 1';
+  if (isValueBetween(14, 15, value)) return '+ 2';
+  if (isValueBetween(16, 17, value)) return '+ 3';
+  if (isValueBetween(18, 19, value)) return '+ 4';
+  if (isValueBetween(20, 21, value)) return '+ 5';
+  if (isValueBetween(22, 23, value)) return '+ 6';
+  if (isValueBetween(24, 25, value)) return '+ 7';
+  if (isValueBetween(26, 27, value)) return '+ 8';
+  if (isValueBetween(28, 29, value)) return '+ 9';
+  return '+ 10';
 });
 </script>
 
@@ -55,7 +55,8 @@ const abilityModifier = computed((): string => {
   align-items: center;
   border-radius: 8px;
   padding: 8px 8px 0 8px;
-  gap: 8px;
+  gap: 4px;
+  height: fit-content;
   flex: 0 1 80px;
   color: #fff;
   background-color: #262626;
