@@ -2,6 +2,7 @@
 import { ref, computed } from 'vue';
 import { useRoute } from 'vue-router';
 import { RouterView } from 'vue-router';
+import { useBreakpoints } from '@vueuse/core';
 
 import FiltersSidebar from './components/TheFiltersSidebar.vue';
 import OptionsSidebar from './components/TheOptionsSidebar.vue';
@@ -14,12 +15,22 @@ const showRightSidebar = ref(true);
 
 const route = useRoute();
 
+const breakpoints = useBreakpoints({
+  tablet: 640,
+  laptop: 1024,
+  desktop: 1280,
+});
+
 const showFiltersSidebar = computed(() => {
   return route.name === 'BeastInfo' ? false : showLeftSidebar.value;
 });
 
 const showOptionsSidebar = computed(() => {
   return route.name === 'BeastInfo' ? false : showRightSidebar.value;
+});
+
+const showIcons = computed((): boolean => {
+  return breakpoints.smallerOrEqual('tablet').value;
 });
 
 function toggleLeftSidebar(): void {
@@ -29,12 +40,16 @@ function toggleLeftSidebar(): void {
 
 <template>
   <header>
-    <icon-filter @click="toggleLeftSidebar()" />
+    <template v-if="showIcons">
+      <icon-filter @click="toggleLeftSidebar()" />
+    </template>
 
     <div>Wild Shape</div>
 
-    <icon-options v-if="!showRightSidebar" @click="showRightSidebar = true" />
-    <icon-close v-else @click="showRightSidebar = false" />
+    <template v-if="showIcons">
+      <icon-options v-if="!showRightSidebar" @click="showRightSidebar = true" />
+      <icon-close v-else @click="showRightSidebar = false" />
+    </template>
   </header>
 
   <filters-sidebar
@@ -81,9 +96,12 @@ header {
     font-weight: 600;
   }
 }
-
+// background: linear-gradient(to bottom, #000000 0%, #390967 20%, #574595 100%) !important
 // #7668cb
 // #8678d7
+
+// background: rgba(112, 87, 255, 0.18);
+// background: rgba(112, 87, 255, 0.24);
 
 main {
   height: calc(100vh - 56px);
