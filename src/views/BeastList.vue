@@ -5,6 +5,11 @@
       :key="index"
       :beast-group="group"
     />
+
+    <div class="beast-list__empty" v-if="!beastModule.groupedBeasts.length">
+      <!-- sad icon -->
+      Can't find anything matching your filters
+    </div>
   </div>
 </template>
 
@@ -25,5 +30,14 @@ const beastModule = useBeastsStore();
   gap: 24px;
   margin: auto;
   max-width: 1020px;
+
+  &__empty {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: calc(100vh - 56px - 24px);
+  }
 }
 </style>
