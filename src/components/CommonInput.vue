@@ -50,7 +50,7 @@ const value = computed({
 
 <style lang="scss" scoped>
 .common-input {
-  color: #fff;
+  color: var(--color-text);
   background-color: inherit;
 
   &__wrapper {

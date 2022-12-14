@@ -159,7 +159,7 @@ useTitle(`${beastInfo?.value?.name} | D&D 5 - Druid wild shape`);
 .beast-info {
   max-width: 1020px;
   margin: auto;
-  color: #fff;
+  color: var(--color-text);
   display: grid;
   gap: 20px;
   grid-template-columns: auto 80px;
@@ -212,7 +212,7 @@ useTitle(`${beastInfo?.value?.name} | D&D 5 - Druid wild shape`);
       border-bottom-right-radius: 4px 2px;
       font-size: 18px;
       font-weight: 600;
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid var(--color-text);
     }
 
     &__content {
@@ -243,7 +243,7 @@ useTitle(`${beastInfo?.value?.name} | D&D 5 - Druid wild shape`);
     justify-content: center;
     width: 100%;
     height: calc(100vh - 56px - 24px);
-    color: #fff;
+    color: var(--color-text);
   }
 }
 </style>

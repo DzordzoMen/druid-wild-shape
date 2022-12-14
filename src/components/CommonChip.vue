@@ -37,7 +37,7 @@ defineEmits<{
   background-color: rgba($color: #fff, $alpha: 0.12);
   transition: all ease-in-out 0.2s;
   border: 1px solid transparent;
-  color: #fff;
+  color: var(--color-text);
   cursor: pointer;
 
   &:hover,
@@ -48,7 +48,7 @@ defineEmits<{
 
   &--selected {
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--color-text);
 
     &:hover,
     &:focus-visible {

@@ -116,7 +116,7 @@ header {
   }
 
   & > a {
-    color: #fff;
+    color: var(--color-text);
     text-decoration: none;
     cursor: pointer;
     font-size: 24px;

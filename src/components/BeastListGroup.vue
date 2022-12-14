@@ -29,7 +29,7 @@ defineProps<{
   grid-template-columns: repeat(2, 1fr);
 
   &__title {
-    color: #fff;
+    color: var(--color-text);
     flex: 1 1 100%;
     display: flex;
     font-size: 18px;
@@ -43,7 +43,7 @@ defineProps<{
     &::after,
     &::before {
       content: '';
-      border-top: 2px solid #fff;
+      border-top: 2px solid var(--color-text);
       width: 100px;
     }
   }

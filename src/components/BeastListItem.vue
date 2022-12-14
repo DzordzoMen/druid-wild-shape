@@ -46,7 +46,7 @@ const beastLink = computed(() => {
   text-decoration: none;
   border-radius: 4px;
   padding: 12px;
-  color: #fff;
+  color: var(--color-text);
   border: 1px solid transparent;
   transition: border-color ease-in-out 0.36s;
 

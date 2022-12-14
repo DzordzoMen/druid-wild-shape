@@ -32,7 +32,7 @@ const beastModule = useBeastsStore();
   max-width: 1020px;
 
   &__empty {
-    color: #fff;
+    color: var(--color-text);
     display: flex;
     justify-content: center;
     align-items: center;

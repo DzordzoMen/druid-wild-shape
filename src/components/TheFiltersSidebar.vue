@@ -84,7 +84,7 @@ onBeforeMount(() => {
 .sidebar-content {
   display: flex;
   flex-direction: column;
-  color: #fff;
+  color: var(--color-text);
   gap: 20px;
 
   & :deep(.common-chip-group) {
@@ -100,7 +100,7 @@ onBeforeMount(() => {
   gap: 6px;
 
   & > label {
-    color: #fff;
+    color: var(--color-text);
     font-family: Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;

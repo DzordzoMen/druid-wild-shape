@@ -58,7 +58,7 @@ const abilityModifier = computed((): string => {
   gap: 4px;
   height: fit-content;
   flex: 0 1 80px;
-  color: #fff;
+  color: var(--color-text);
   background-color: #262626;
   text-transform: uppercase;
 

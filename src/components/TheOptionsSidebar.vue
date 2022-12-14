@@ -82,7 +82,7 @@ const moonDruid = computed({
   gap: 6px;
 
   & > label {
-    color: #fff;
+    color: var(--color-text);
     font-family: Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;

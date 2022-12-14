@@ -38,7 +38,7 @@ const value = computed({
 
 <style scoped lang="scss">
 .common-checkbox {
-  color: #fff;
+  color: var(--color-text);
   background-color: inherit;
 
   &__wrapper {
@@ -92,8 +92,8 @@ const value = computed({
         height: 10px;
         transform: rotate(45deg);
         transform-origin: 70% 45%;
-        border-bottom: 2px solid #fff;
-        border-right: 2px solid #fff;
+        border-bottom: 2px solid var(--color-text);
+        border-right: 2px solid var(--color-text);
       }
     }
   }
