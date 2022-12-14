@@ -103,6 +103,7 @@ header {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.9), 0 0px 2px rgba(0, 0, 0, 0.9) !important;
   background-color: #18181b;
   padding: 12px;
+  color: var(--color-text);
   z-index: 8;
   display: flex;
   flex-direction: row;
