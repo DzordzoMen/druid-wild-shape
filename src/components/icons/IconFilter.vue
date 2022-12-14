@@ -19,6 +19,6 @@
 defineProps({
   width: { type: Number, required: false, default: 24 },
   height: { type: Number, required: false, default: 24 },
-  color: { type: String, required: false, default: '#fff' },
+  color: { type: String, required: false, default: 'currentColor' },
 });
 </script>
