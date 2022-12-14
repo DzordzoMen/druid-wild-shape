@@ -1,88 +1,96 @@
 <template>
   <div class="beast-info">
-    <div class="beast-info__name">
-      <div>{{ beastInfo?.name }}</div>
-      <div>{{ beastSizeAndAlignment }}</div>
-      <div v-if="beastDescription">{{ beastDescription }}</div>
-    </div>
-
-    <div class="beast-info__abilities">
-      <beast-ability-item
-        v-for="(ability, index) in beastAbilities"
-        :key="index"
-        :name="ability.name"
-        :value="ability.baseValue"
-      />
-    </div>
-
-    <div class="beast-info__details">
-      <div class="beast-info-details-item beast-info-details-item__content">
-        <ul>
-          <li>
-            <b>Armor class</b>
-            {{ beastInfo?.armorClass }}
-          </li>
-          <li>
-            <b>Hit points</b>
-            {{ beastInfo?.hitPoints }}
-            ({{ beastInfo?.hitPointsInfo }})
-          </li>
-          <li>
-            <b>Speed</b>
-            {{ beastSpeed }}
-          </li>
-          <li v-if="beastEnvironments">
-            <b>Environments</b>
-            {{ beastEnvironments }}
-          </li>
-          <li>
-            <b>Challenge</b>
-            {{ beastInfo?.challenge }}
-          </li>
-        </ul>
+    <template v-if="beastInfo">
+      <div class="beast-info__name">
+        <div>{{ beastInfo?.name }}</div>
+        <div>{{ beastSizeAndAlignment }}</div>
+        <div v-if="beastDescription">{{ beastDescription }}</div>
       </div>
 
-      <div class="beast-info-details-item">
-        <div class="beast-info-details-item__title">Skills</div>
-        <div class="beast-info-details-item__content">
+      <div class="beast-info__abilities">
+        <beast-ability-item
+          v-for="(ability, index) in beastAbilities"
+          :key="index"
+          :name="ability.name"
+          :value="ability.baseValue"
+        />
+      </div>
+
+      <div class="beast-info__details">
+        <div class="beast-info-details-item beast-info-details-item__content">
           <ul>
-            <li v-for="(skill, index) in beastInfo?.skills" :key="index">
-              <b>{{ skill.name }}</b>
-              {{ skill?.value }}
+            <li>
+              <b>Armor class</b>
+              {{ beastInfo?.armorClass }}
             </li>
             <li>
-              <b>Passive perception</b>
-              {{ beastInfo?.passivePerception }}
+              <b>Hit points</b>
+              {{ beastInfo?.hitPoints }}
+              ({{ beastInfo?.hitPointsInfo }})
+            </li>
+            <li>
+              <b>Speed</b>
+              {{ beastSpeed }}
+            </li>
+            <li v-if="beastEnvironments">
+              <b>Environments</b>
+              {{ beastEnvironments }}
+            </li>
+            <li>
+              <b>Challenge</b>
+              {{ beastInfo?.challenge }}
             </li>
           </ul>
         </div>
-      </div>
 
-      <div class="beast-info-details-item" v-if="beastInfo?.traits?.length">
-        <div class="beast-info-details-item__title">Traits</div>
-        <div class="beast-info-details-item__content">
-          <ul>
-            <li v-for="(trait, index) in beastInfo?.traits" :key="index">
-              <b>{{ trait?.name }}</b>
-              {{ trait?.description }}
-            </li>
-          </ul>
+        <div class="beast-info-details-item">
+          <div class="beast-info-details-item__title">Skills</div>
+          <div class="beast-info-details-item__content">
+            <ul>
+              <li v-for="(skill, index) in beastInfo?.skills" :key="index">
+                <b>{{ skill.name }}</b>
+                {{ skill?.value }}
+              </li>
+              <li>
+                <b>Passive perception</b>
+                {{ beastInfo?.passivePerception }}
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
 
-      <div class="beast-info-details-item">
-        <div class="beast-info-details-item__title">Actions</div>
-        <div class="beast-info-details-item__content">
-          <ul>
-            <li v-for="(action, index) in beastInfo?.actions" :key="index">
-              <b>{{ action?.name }}</b>
-              {{ action?.description }}
-            </li>
-          </ul>
+        <div class="beast-info-details-item" v-if="beastInfo?.traits?.length">
+          <div class="beast-info-details-item__title">Traits</div>
+          <div class="beast-info-details-item__content">
+            <ul>
+              <li v-for="(trait, index) in beastInfo?.traits" :key="index">
+                <b>{{ trait?.name }}</b>
+                {{ trait?.description }}
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
 
-      <!-- {{ beastInfo }} -->
+        <div class="beast-info-details-item">
+          <div class="beast-info-details-item__title">Actions</div>
+          <div class="beast-info-details-item__content">
+            <ul>
+              <li v-for="(action, index) in beastInfo?.actions" :key="index">
+                <b>{{ action?.name }}</b>
+                {{ action?.description }}
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- {{ beastInfo }} -->
+      </div>
+    </template>
+
+    <div class="beast-info__cant-find" v-else>
+      <!-- sad icon -->
+      Can't find beast
+      <!-- button to list -->
     </div>
   </div>
 </template>
@@ -226,6 +234,16 @@ useTitle(`${beastInfo?.value?.name} | D&D 5 - Druid wild shape`);
         gap: 4px;
       }
     }
+  }
+
+  &__cant-find {
+    grid-column: 1 / 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 56px - 24px);
+    color: #fff;
   }
 }
 </style>
