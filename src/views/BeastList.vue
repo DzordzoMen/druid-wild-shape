@@ -14,11 +14,14 @@
 </template>
 
 <script setup lang="ts">
+import { useTitle } from '@vueuse/core';
 import { useBeastsStore } from '@/stores/beasts';
 
 import BeastListGroup from '@/components/BeastListGroup.vue';
 
 const beastModule = useBeastsStore();
+
+useTitle(`D&D 5 - Druid wild shape`);
 </script>
 
 <style scoped lang="scss">
