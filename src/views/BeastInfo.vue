@@ -152,7 +152,7 @@ const beastSpeed = computed((): string | null => {
   );
 });
 
-useTitle(`${beastInfo?.value?.name} | D&D 5 - Druid wild shape`);
+useTitle(`${beastInfo?.value?.name || ''} | D&D 5 - Druid wild shape`);
 </script>
 
 <style scoped lang="scss">
