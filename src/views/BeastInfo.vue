@@ -88,8 +88,8 @@
     </template>
 
     <div class="beast-info__cant-find" v-else>
-      <!-- sad icon -->
-      Can't find beast
+      <icon-otter :height="96" :width="96" />
+      Oops, we can't find this beast
       <!-- button to list -->
     </div>
   </div>
@@ -104,6 +104,7 @@ import type { IBeast } from '@/types/IBeast';
 import { Alignment } from '@/types/enums/Alignment';
 
 import BeastAbilityItem from '@/components/BeastInfoAbilityItem.vue';
+import IconOtter from '@/components/icons/IconOtter.vue';
 
 type AbilityItem = {
   name: string;
@@ -152,7 +153,7 @@ const beastSpeed = computed((): string | null => {
   );
 });
 
-useTitle(`${beastInfo?.value?.name || ''} | D&D 5 - Druid wild shape`);
+useTitle(`${beastInfo?.value?.name || 'Oops'} | D&D 5 - Druid wild shape`);
 </script>
 
 <style scoped lang="scss">
@@ -241,9 +242,14 @@ useTitle(`${beastInfo?.value?.name || ''} | D&D 5 - Druid wild shape`);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     height: calc(100vh - 56px - 24px);
+    width: 100%;
     color: var(--color-text);
+    flex-direction: column;
+    font-size: 20px;
+    text-align: center;
+    padding: 40px;
+    gap: 12px;
   }
 }
 </style>
