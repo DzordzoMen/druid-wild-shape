@@ -96,7 +96,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue';
+import { computed, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { useTitle } from '@vueuse/core';
 import { useBeastsStore } from '@/stores/beasts';
@@ -112,6 +112,7 @@ type AbilityItem = {
 };
 
 const route = useRoute();
+
 const beastModule = useBeastsStore();
 
 const beastName: string = route.params.beastName as string;
@@ -154,6 +155,10 @@ const beastSpeed = computed((): string | null => {
 });
 
 useTitle(`${beastInfo?.value?.name || 'Oops'} | D&D 5 - Druid wild shape`);
+
+onMounted(() => {
+  document.querySelector('main')?.scrollTo({ top: 0, left: 0 });
+});
 </script>
 
 <style scoped lang="scss">
