@@ -243,7 +243,7 @@ onMounted(() => {
   }
 
   &__cant-find {
-    grid-column: 1 / 2;
+    grid-column: 1 / 3;
     display: flex;
     align-items: center;
     justify-content: center;
