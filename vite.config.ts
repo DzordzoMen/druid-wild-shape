@@ -23,6 +23,24 @@ export default defineConfig({
         theme_color: '#18181b',
         background_color: '#121212',
       },
+      workbox: {
+        runtimeCaching: [
+          {
+            urlPattern: /books\/.*\.json\?import/i,
+            handler: 'CacheFirst',
+            options: {
+              cacheName: 'dnd-books-cache',
+              expiration: {
+                maxEntries: 12,
+                maxAgeSeconds: 60 * 60 * 24 * 365,
+              },
+              cacheableResponse: {
+                statuses: [0, 200],
+              },
+            },
+          },
+        ],
+      },
     }),
   ],
   resolve: {
