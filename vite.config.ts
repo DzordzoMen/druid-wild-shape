@@ -22,6 +22,38 @@ export default defineConfig({
         description: 'Dungeons and Dragons 5 - Druid Wild Shape',
         theme_color: '#18181b',
         background_color: '#121212',
+        icons: [
+          {
+            src: '/logos/favicon-16x16.png',
+            sizes: '16x16',
+            type: 'image/png',
+            purpose: 'any',
+          },
+          {
+            src: '/logos/favicon-32x32.png',
+            sizes: '32x32',
+            type: 'image/png',
+            purpose: 'any',
+          },
+          {
+            src: '/logos/android-chrome-192x192.png',
+            sizes: '192x192',
+            type: 'image/png',
+            purpose: 'any',
+          },
+          {
+            src: '/logos/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'any',
+          },
+          {
+            src: '/logos/android-chrome-512x512.png',
+            sizes: '512x512',
+            type: 'image/png',
+            purpose: 'maskable',
+          },
+        ],
       },
       workbox: {
         runtimeCaching: [
