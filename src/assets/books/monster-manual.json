@@ -3392,5 +3392,412 @@
         "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: (1d1) piercing damage."
       }
     ]
+  },
+  {
+    "name": "Rat",
+    "hitPoints": 1,
+    "hitPointsInfo": "1d4-1",
+    "armorClass": 10,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 20
+      }
+    ],
+    "size": "Tiny",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "30 ft."
+      }
+    ],
+    "passivePerception": 10,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 2,
+      "dexterity": 11,
+      "constitution": 9,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 4
+    },
+    "traits": [
+      {
+        "name": "Keen Smell",
+        "description": "The rat has advantage on Wisdom (Perception) checks that rely on smell."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +0 to hit, reach 5 ft., one target. Hit: (1d1) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Raven",
+    "hitPoints": 1,
+    "hitPointsInfo": "1d4-1",
+    "armorClass": 12,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 10
+      },
+      {
+        "name": "Fly",
+        "valueInFt": 60
+      }
+    ],
+    "size": "Tiny",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+3"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 2,
+      "dexterity": 14,
+      "constitution": 8,
+      "intelligence": 2,
+      "wisdom": 12,
+      "charisma": 6
+    },
+    "traits": [
+      {
+        "name": "Mimicry",
+        "description": "The raven can mimic simple sounds it has heard, such as a person whispering, a baby crying, or an animal chittering. A creature that hears the sounds can tell they are imitations with a successful DC 10 Wisdom (Insight) check."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Beak",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: (1d1) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Reef Shark",
+    "description": "Smaller than giant sharks and Hunter sharks, reef sharks inhabit shallow waters and Coral Reefs, gathering in small packs to hunt. A full-grown specimen measures 6 to 10 feet long.",
+    "hitPoints": 22,
+    "hitPointsInfo": "4d8+4",
+    "armorClass": 12,
+    "challenge": "1/2",
+    "speed": [
+      {
+        "name": "Swim",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Blindsight",
+        "value": "30 ft."
+      },
+      {
+        "name": "Perception",
+        "value": "+2"
+      }
+    ],
+    "passivePerception": 12,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 14,
+      "dexterity": 13,
+      "constitution": 13,
+      "intelligence": 1,
+      "wisdom": 10,
+      "charisma": 4
+    },
+    "traits": [
+      {
+        "name": "Pack Tactics",
+        "description": "The shark has advantage on an attack roll against a creature if at least one of the shark's allies is within 5 ft. of the creature and the ally isn't incapacitated."
+      },
+      {
+        "name": "Water Breathing",
+        "description": "The shark can breathe only underwater."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: (1d8 + 2) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Rhinoceros",
+    "hitPoints": 45,
+    "hitPointsInfo": "6d10+12",
+    "armorClass": 11,
+    "challenge": "2",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 11,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 21,
+      "dexterity": 8,
+      "constitution": 15,
+      "intelligence": 2,
+      "wisdom": 12,
+      "charisma": 6
+    },
+    "traits": [
+      {
+        "name": "Charge",
+        "description": "If the rhinoceros moves at least 20 ft. straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) bludgeoning damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: (2d8 + 5) bludgeoning damage."
+      }
+    ]
+  },
+  {
+    "name": "Riding Horse",
+    "hitPoints": 13,
+    "hitPointsInfo": "2d10+2",
+    "armorClass": 10,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 60
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 10,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 16,
+      "dexterity": 10,
+      "constitution": 12,
+      "intelligence": 2,
+      "wisdom": 11,
+      "charisma": 7
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Hooves",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: (2d4 + 3) bludgeoning damage."
+      }
+    ]
+  },
+  {
+    "name": "Saber-Toothed Tiger",
+    "hitPoints": 52,
+    "hitPointsInfo": "7d10+14",
+    "armorClass": 12,
+    "challenge": "2",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+3"
+      },
+      {
+        "name": "Stealth",
+        "value": "+6"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 18,
+      "dexterity": 14,
+      "constitution": 15,
+      "intelligence": 3,
+      "wisdom": 12,
+      "charisma": 8
+    },
+    "traits": [
+      {
+        "name": "Keen Smell",
+        "description": "The tiger has advantage on Wisdom (Perception) checks that rely on smell."
+      },
+      {
+        "name": "Pounce",
+        "description": "If the tiger moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target is prone, the tiger can make one bite attack against it as a bonus action."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: (1d10 + 5) piercing damage."
+      },
+      {
+        "name": "Claw",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: (2d6 + 5) slashing damage."
+      }
+    ]
+  },
+  {
+    "name": "Scorpion",
+    "hitPoints": 1,
+    "hitPointsInfo": "1d4-1",
+    "armorClass": 11,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 10
+      }
+    ],
+    "size": "Tiny",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Blindsight",
+        "value": "10 ft."
+      }
+    ],
+    "passivePerception": 9,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 2,
+      "dexterity": 11,
+      "constitution": 8,
+      "intelligence": 1,
+      "wisdom": 8,
+      "charisma": 2
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Sting",
+        "description": "Melee Weapon Attack: +2 to hit, reach 5 ft., one creature. Hit: (1d1) piercing damage plus (1d8)poison damage. The target must make a DC 9 Constitution saving throw, taking the poison damage on a failed save, or half as much damage on a successful one."
+      }
+    ]
+  },
+  {
+    "name": "Sea Horse",
+    "hitPoints": 1,
+    "hitPointsInfo": "1d4-1",
+    "armorClass": 11,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Swim",
+        "valueInFt": 20
+      }
+    ],
+    "size": "Tiny",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 10,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 1,
+      "dexterity": 12,
+      "constitution": 8,
+      "intelligence": 1,
+      "wisdom": 10,
+      "charisma": 2
+    },
+    "traits": [
+      {
+        "name": "Water Breathing",
+        "description": "The sea horse can breathe only underwater."
+      }
+    ],
+    "actions": []
+  },
+  {
+    "name": "Spider",
+    "hitPoints": 1,
+    "hitPointsInfo": "1d4-1",
+    "armorClass": 12,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 20
+      },
+      {
+        "name": "Climb",
+        "valueInFt": 20
+      }
+    ],
+    "size": "Tiny",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "30 ft."
+      },
+      {
+        "name": "Stealth",
+        "value": "+4"
+      }
+    ],
+    "passivePerception": 12,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 2,
+      "dexterity": 14,
+      "constitution": 8,
+      "intelligence": 1,
+      "wisdom": 10,
+      "charisma": 2
+    },
+    "traits": [
+      {
+        "name": "Spider Climb",
+        "description": "The spider can climb difficult surfaces, including upside down on ceilings, without needing to make an ability check."
+      },
+      {
+        "name": "Web Sense",
+        "description": "While in contact with a web, the spider knows the exact location of any other creature in contact with the same web."
+      },
+      {
+        "name": "Web Walker",
+        "description": "The spider ignores movement restrictions caused by webbing."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: (1d1) piercing damage plus (1d4)poison damage. The target must succeed on a DC 9 Constitution saving throw or take the poison damage."
+      }
+    ]
   }
 ]
