@@ -3799,5 +3799,256 @@
         "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: (1d1) piercing damage plus (1d4)poison damage. The target must succeed on a DC 9 Constitution saving throw or take the poison damage."
       }
     ]
+  },
+  {
+    "name": "Tiger",
+    "hitPoints": 37,
+    "hitPointsInfo": "5d10+10",
+    "armorClass": 12,
+    "challenge": "1",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "60 ft."
+      },
+      {
+        "name": "Perception",
+        "value": "+3"
+      },
+      {
+        "name": "Stealth",
+        "value": "+6"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 17,
+      "dexterity": 15,
+      "constitution": 14,
+      "intelligence": 3,
+      "wisdom": 12,
+      "charisma": 8
+    },
+    "traits": [
+      {
+        "name": "Keen Smell",
+        "description": "The tiger has advantage on Wisdom (Perception) checks that rely on smell."
+      },
+      {
+        "name": "Pounce",
+        "description": "If the tiger moves at least 20 ft. straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the tiger can make one bite attack against it as a bonus action."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: (1d10 + 3) piercing damage."
+      },
+      {
+        "name": "Claw",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: (1d8 + 3) slashing damage."
+      }
+    ]
+  },
+  {
+    "name": "Vulture",
+    "hitPoints": 5,
+    "hitPointsInfo": "1d8+1",
+    "armorClass": 10,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 10
+      },
+      {
+        "name": "Fly",
+        "valueInFt": 50
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+3"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 7,
+      "dexterity": 10,
+      "constitution": 13,
+      "intelligence": 2,
+      "wisdom": 12,
+      "charisma": 4
+    },
+    "traits": [
+      {
+        "name": "Keen Sight and Smell",
+        "description": "The vulture has advantage on Wisdom (Perception) checks that rely on sight or smell."
+      },
+      {
+        "name": "Pack Tactics",
+        "description": "The vulture has advantage on an attack roll against a creature if at least one of the vulture's allies is within 5 ft. of the creature and the ally isn't incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Beak",
+        "description": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: (1d4) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Warhorse",
+    "hitPoints": 19,
+    "hitPointsInfo": "3d10+3",
+    "armorClass": 11,
+    "challenge": "1/2",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 60
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 11,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 18,
+      "dexterity": 12,
+      "constitution": 13,
+      "intelligence": 2,
+      "wisdom": 12,
+      "charisma": 7
+    },
+    "traits": [
+      {
+        "name": "Trampling Charge",
+        "description": "If the horse moves at least 20 ft. straight toward a creature and then hits it with a hooves attack on the same turn, that target must succeed on a DC 14 Strength saving throw or be knocked prone. If the target is prone, the horse can make another attack with its hooves against it as a bonus action."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Hooves",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: (2d6 + 4) bludgeoning damage."
+      }
+    ]
+  },
+  {
+    "name": "Weasel",
+    "hitPoints": 1,
+    "hitPointsInfo": "1d4-1",
+    "armorClass": 13,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Tiny",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+3"
+      },
+      {
+        "name": "Stealth",
+        "value": "+5"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 3,
+      "dexterity": 16,
+      "constitution": 8,
+      "intelligence": 2,
+      "wisdom": 12,
+      "charisma": 3
+    },
+    "traits": [
+      {
+        "name": "Keen Hearing and Smell",
+        "description": "The weasel has advantage on Wisdom (Perception) checks that rely on hearing or smell."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one creature. Hit: (1d1) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Wolf",
+    "hitPoints": 11,
+    "hitPointsInfo": "2d8+2",
+    "armorClass": 13,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+3"
+      },
+      {
+        "name": "Stealth",
+        "value": "+4"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 12,
+      "dexterity": 15,
+      "constitution": 12,
+      "intelligence": 3,
+      "wisdom": 12,
+      "charisma": 6
+    },
+    "traits": [
+      {
+        "name": "Keen Hearing and Smell",
+        "description": "The wolf has advantage on Wisdom (Perception) checks that rely on hearing or smell."
+      },
+      {
+        "name": "Pack Tactics",
+        "description": "The wolf has advantage on an attack roll against a creature if at least one of the wolf's allies is within 5 ft. of the creature and the ally isn't incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: (2d4 + 2) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone"
+      }
+    ]
   }
 ]
