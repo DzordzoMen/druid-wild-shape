@@ -71,7 +71,7 @@
           </div>
         </div>
 
-        <div class="beast-info-details-item">
+        <div class="beast-info-details-item" v-if="beastInfo?.actions?.length">
           <div class="beast-info-details-item__title">Actions</div>
           <div class="beast-info-details-item__content">
             <ul>
