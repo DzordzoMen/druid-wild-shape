@@ -2534,5 +2534,493 @@
         "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: (1d4 + 1) bludgeoning damage."
       }
     ]
+  },
+  {
+    "name": "Hawk",
+    "hitPoints": 1,
+    "hitPointsInfo": "1d4 - 1",
+    "armorClass": 13,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 10
+      },
+      {
+        "name": "Fly",
+        "valueInFt": 60
+      }
+    ],
+    "size": "Tiny",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+4"
+      }
+    ],
+    "passivePerception": 11,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 5,
+      "dexterity": 16,
+      "constitution": 8,
+      "intelligence": 2,
+      "wisdom": 14,
+      "charisma": 6
+    },
+    "traits": [
+      {
+        "name": "Keen Sight",
+        "description": "The hawk has advantage on Wisdom (Perception) checks that rely on sight."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Talons",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 1 slashing damage."
+      }
+    ]
+  },
+  {
+    "name": "Hunter Shark",
+    "description": "Smaller than a Giant Shark but larger and fiercer than a Reef Shark, a Hunter shark haunts deep waters. It usually hunts alone, but multiple Hunter sharks might feed in the same area. A fully grown Hunter shark is 15 to 20 feet long.",
+    "hitPoints": 45,
+    "hitPointsInfo": "6d10+12",
+    "armorClass": 12,
+    "challenge": "2",
+    "speed": [
+      {
+        "name": "Swim",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Blindsight",
+        "value": "30 ft."
+      },
+      {
+        "name": "Perception",
+        "value": "+2"
+      }
+    ],
+    "passivePerception": 12,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 18,
+      "dexterity": 13,
+      "constitution": 15,
+      "intelligence": 1,
+      "wisdom": 10,
+      "charisma": 4
+    },
+    "traits": [
+      {
+        "name": "Blood Frenzy",
+        "description": "The shark has advantage on melee Attack rolls against any creature that doesn't have all its Hit Points."
+      },
+      {
+        "name": "Water Breathing",
+        "description": "The shark can breathe only Underwater."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Hyena",
+    "hitPoints": 5,
+    "hitPointsInfo": "1d8+1",
+    "armorClass": 11,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 50
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+3"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 11,
+      "dexterity": 13,
+      "constitution": 12,
+      "intelligence": 2,
+      "wisdom": 12,
+      "charisma": 5
+    },
+    "traits": [
+      {
+        "name": "Pack Tactics",
+        "description": "The hyena has advantage on an Attack roll against a creature if at least one of the hyena's allies is within 5 ft. of the creature and the ally isn't Incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: 3 (1d6) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Jackal",
+    "hitPoints": 3,
+    "hitPointsInfo": "1d6",
+    "armorClass": 12,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Small",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+3"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 8,
+      "dexterity": 15,
+      "constitution": 11,
+      "intelligence": 3,
+      "wisdom": 12,
+      "charisma": 6
+    },
+    "traits": [
+      {
+        "name": "Keen Hearing and Smell",
+        "description": "The jackal has advantage on Wisdom (Perception) checks that rely on hearing or smell."
+      },
+      {
+        "name": "Pack Tactics",
+        "description": "The jackal has advantage on an Attack roll against a creature if at least one of the jackal's allies is within 5 ft. of the creature and the ally isn't Incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +1 to hit, reach 5 ft., one target. Hit: 1 (1d4 - 1) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Killer Whale",
+    "hitPoints": 90,
+    "hitPointsInfo": "12d12+12",
+    "armorClass": 12,
+    "challenge": "3",
+    "speed": [
+      {
+        "name": "Swim",
+        "valueInFt": 60
+      }
+    ],
+    "size": "Huge",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Blindsight",
+        "value": "120 ft."
+      },
+      {
+        "name": "Perception",
+        "value": "+3"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 19,
+      "dexterity": 10,
+      "constitution": 13,
+      "intelligence": 3,
+      "wisdom": 12,
+      "charisma": 7
+    },
+    "traits": [
+      {
+        "name": "Echolocation",
+        "description": "The whale can't use its Blindsight while Deafened."
+      },
+      {
+        "name": "Hold Breath",
+        "description": "The whale can hold its breath for 30 minutes"
+      },
+      {
+        "name": "Keen Hearing",
+        "description": "The whale has advantage on Wisdom (Perception) checks that rely on hearing."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 21 (5d6 + 4) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Lion",
+    "hitPoints": 26,
+    "hitPointsInfo": "4d10+4",
+    "armorClass": 12,
+    "challenge": "1",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 50
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+3"
+      },
+      {
+        "name": "Stealth",
+        "value": "+6"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 17,
+      "dexterity": 15,
+      "constitution": 13,
+      "intelligence": 3,
+      "wisdom": 12,
+      "charisma": 8
+    },
+    "traits": [
+      {
+        "name": "Keen Smell",
+        "description": "The lion has advantage on Wisdom (Perception) checks that rely on smell."
+      },
+      {
+        "name": "Pack Tactics",
+        "description": "The lion has advantage on an attack roll against a creature if at least one of the lion's allies is within 5 ft. of the creature and the ally isn't incapacitated."
+      },
+      {
+        "name": "Pounce",
+        "description": "If the lion moves at least 20 ft. straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 13 Strength saving throw or be knocked prone. If the target is prone, the lion can make one bite attack against it as a bonus action."
+      },
+      {
+        "name": "Running Leap",
+        "description": "With a 10-foot running start, the lion can long jump up to 25 ft.."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: (1d8 + 3) piercing damage."
+      },
+      {
+        "name": "Claw",
+        "description": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: (1d6 + 3) slashing damage."
+      }
+    ]
+  },
+  {
+    "name": "Lizard",
+    "hitPoints": 2,
+    "hitPointsInfo": "1d4",
+    "armorClass": 10,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 20
+      },
+      {
+        "name": "Climb",
+        "valueInFt": 20
+      }
+    ],
+    "size": "Tiny",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "30 ft."
+      }
+    ],
+    "passivePerception": 9,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 2,
+      "dexterity": 11,
+      "constitution": 10,
+      "intelligence": 1,
+      "wisdom": 8,
+      "charisma": 3
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +0 to hit, reach 5 ft., one target. Hit: (1d1) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Mammoth",
+    "description": "A mammoth is an elephantine creature with thick fur and long tusks. Stockier and fiercer than normal elephants, mammoths inhabit a wide range of climes, from subarctic to subtropical.",
+    "hitPoints": 126,
+    "hitPointsInfo": "11d12+55",
+    "armorClass": 13,
+    "challenge": "6",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Huge",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 10,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 24,
+      "dexterity": 9,
+      "constitution": 21,
+      "intelligence": 3,
+      "wisdom": 11,
+      "charisma": 6
+    },
+    "traits": [
+      {
+        "name": "Trampling Charge",
+        "description": "If the mammoth moves at least 20 ft. straight toward a creature and then hits it with a gore Attack on the same turn, that target must succeed on a DC 18 Strength saving throw or be knocked prone. If the target is prone, the mammoth can make one stomp Attack against it as a bonus Action."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "description": "Melee Weapon Attack: +10 to hit, reach 10 ft., one target. Hit: (4d8 + 7) piercing damage."
+      },
+      {
+        "name": "Stomp",
+        "description": "Melee Weapon Attack: +10 to hit, reach 5 ft., one prone creature. Hit: (4d10 + 7) bludgeoning damage."
+      }
+    ]
+  },
+  {
+    "name": "Mastiff",
+    "description": "Mastiffs are impressive hounds prized by Humanoids for their loyalty and keen Senses. Mastiffs can be trained as guard dogs, hunting dogs, and war dogs. Halflings and other Small Humanoids ride them as Mounts.",
+    "hitPoints": 5,
+    "hitPointsInfo": "1d8+1",
+    "armorClass": 12,
+    "challenge": "1/8",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+3"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 13,
+      "dexterity": 14,
+      "constitution": 12,
+      "intelligence": 3,
+      "wisdom": 12,
+      "charisma": 7
+    },
+    "traits": [
+      {
+        "name": "Keen Hearing and Smell",
+        "description": "The mastiff has advantage on Wisdom (Perception) checks that rely on hearing or smell."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +3 to hit, reach 5 ft., one target. Hit: (1d6 + 1) piercing damage. If the target is a creature, it must succeed on a DC 11 Strength saving throw or be knocked prone"
+      }
+    ]
+  },
+  {
+    "name": "Mule",
+    "hitPoints": 11,
+    "hitPointsInfo": "2d8+2",
+    "armorClass": 10,
+    "challenge": "1/8",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": [],
+    "skills": [],
+    "passivePerception": 10,
+    "proficiencyBonus": 0,
+    "abilities": {
+      "strength": 14,
+      "dexterity": 10,
+      "constitution": 13,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 5
+    },
+    "traits": [
+      {
+        "name": "Beast of Burden",
+        "description": "The mule is considered to be a Large animal for the purpose of determining its carrying capacity."
+      },
+      {
+        "name": "Sure-Footed",
+        "description": "The mule has advantage on Strength and Dexterity saving throws made against effects that would knock it prone."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Hooves",
+        "description": "Melee Weapon Attack: +2 to hit, reach 5 ft., one target. Hit: (1d4 + 2) bludgeoning damage."
+      }
+    ]
   }
 ]
