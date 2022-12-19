@@ -56,7 +56,10 @@ onClickOutside(sidebarRef, () => {
         'sidebar--right': right,
       }"
     >
-      <slot />
+      <div class="sidebar__panel">
+        <slot />
+      </div>
+      <div class="sidebar__overlay" @click="emit('update:show', false)" />
     </div>
   </Transition>
 </template>
@@ -66,19 +69,51 @@ onClickOutside(sidebarRef, () => {
   position: absolute;
   top: 56px;
   height: calc(100vh - 56px);
-  width: 240px;
-  background-color: #262626;
+  width: 100vw;
   z-index: 6;
-  padding: 12px;
+
+  &__overlay {
+    width: inherit;
+    height: 100%;
+    top: 0;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.1);
+    z-index: -1;
+
+    animation-duration: 0.5s;
+    animation-name: overlay-enter;
+    animation-delay: 0.4s;
+    animation-fill-mode: backwards;
+  }
+
+  &__panel {
+    width: 240px;
+    height: 100%;
+    background-color: #262626;
+    padding: 12px;
+  }
 
   &--left {
     left: 0;
-    box-shadow: 1px 0 4px rgba(0, 0, 0, 0.9), 0 0px 4px rgba(0, 0, 0, 0.9);
+
+    & > .sidebar__panel {
+      box-shadow: 1px 0 4px rgba(0, 0, 0, 0.9), 0 0px 4px rgba(0, 0, 0, 0.9);
+      margin-right: auto;
+    }
   }
 
   &--right {
     right: 0;
-    box-shadow: -1px 0 4px rgba(0, 0, 0, 0.9), 0 0px 4px rgba(0, 0, 0, 0.9);
+    & > .sidebar__panel {
+      box-shadow: -1px 0 4px rgba(0, 0, 0, 0.9), 0 0px 4px rgba(0, 0, 0, 0.9);
+      margin-left: auto;
+    }
+  }
+
+  @media (min-width: 640px) {
+    & {
+      width: 240px;
+    }
   }
 }
 
@@ -90,7 +125,7 @@ onClickOutside(sidebarRef, () => {
 
   &-enter-from,
   &-leave-to {
-    transform: translateX(-240px);
+    transform: translateX(-100%);
   }
 }
 
@@ -102,7 +137,16 @@ onClickOutside(sidebarRef, () => {
 
   &-enter-from,
   &-leave-to {
-    transform: translateX(240px);
+    transform: translateX(100%);
+  }
+}
+
+@keyframes overlay-enter {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>
