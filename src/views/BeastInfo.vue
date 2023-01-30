@@ -48,7 +48,18 @@
           <div class="beast-info-details-item__content">
             <ul>
               <li v-for="(skill, index) in beastInfo?.skills" :key="index">
-                <b>{{ skill.name }}</b>
+                <b
+                  v-tooltip="{
+                    content: getSensesTooltip(skill.name),
+                    triggers: ['hover', 'click', 'focus', 'touch'],
+                    disabled: !hasSensesTooltip(skill.name),
+                    html: true,
+                  }"
+                  :tabindex="hasSensesTooltip(skill.name) ? 0 : -1"
+                  :aria-disabled="!hasSensesTooltip(skill.name)"
+                >
+                  {{ skill.name }}
+                </b>
                 {{ skill?.value }}
               </li>
               <li>
@@ -96,6 +107,8 @@
 </template>
 
 <script setup lang="ts">
+import sensesInfo from '@/assets/senses-info.json';
+
 import { computed, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { useTitle } from '@vueuse/core';
@@ -110,6 +123,13 @@ type AbilityItem = {
   name: string;
   baseValue: number;
 };
+
+type SenseTooltip = {
+  name: string;
+  text: string;
+};
+
+const sensesTooltips = sensesInfo as SenseTooltip[];
 
 const route = useRoute();
 
@@ -159,6 +179,18 @@ useTitle(`${beastInfo?.value?.name || 'Oops'} | D&D 5 - Druid wild shape`);
 onMounted(() => {
   document.querySelector('main')?.scrollTo({ top: 0, left: 0 });
 });
+
+function getSensesTooltip(senseName: string): string | undefined {
+  const senseTooltip = sensesTooltips?.find(
+    (sense) => sense.name.toLowerCase() === senseName?.toLowerCase()
+  );
+
+  return senseTooltip?.text ?? undefined;
+}
+
+function hasSensesTooltip(senseName: string): boolean {
+  return !!getSensesTooltip(senseName);
+}
 </script>
 
 <style scoped lang="scss">
@@ -226,6 +258,11 @@ onMounted(() => {
 
       & b {
         font-weight: 600;
+
+        &.v-popper--has-tooltip:not([aria-disabled='true']) {
+          cursor: pointer;
+          border-bottom: 3px solid var(--primary-color);
+        }
 
         &::after {
           content: ':';
