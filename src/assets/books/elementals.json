@@ -25,6 +25,9 @@
         "value": "60 ft."
       }
     ],
+    "damageResistances": ["Lightning", "Thunder", "Bludgeoning", "Piercing", "Slashing from Nonmagical Attack"],
+    "damageImmunities": ["Poison"],
+    "conditionImmunities": ["Exhaustion", "Grappled", "Paralyzed", "Petrified", "Poisoned", "Prone", "Restrained", "Unconscious"],
     "passivePerception": 19,
     "proficiencyBonus": 3,
     "abilities": {
@@ -86,6 +89,10 @@
         "value": "60 ft."
       }
     ],
+    "damageVulnerabilities": ["Thunder"],
+    "damageResistances": ["Bludgeoning", "Piercing", "Slashing from Nonmagical Attack"],
+    "damageImmunities": ["Poison"],
+    "conditionImmunities": ["Exhaustion", "Paralyzed", "Petrified", "Poisoned", "Unconscious"],
     "passivePerception": 10,
     "proficiencyBonus": 3,
     "abilities": {
@@ -139,6 +146,9 @@
         "value": "60 ft."
       }
     ],
+    "damageResistances": ["Bludgeoning", "Piercing", "Slashing from Nonmagical Attack"],
+    "damageImmunities": ["Fire", "Poison"],
+    "conditionImmunities": ["Exhaustion", "Grappled", "Paralyzed", "Petrified", "Poisoned", "Prone", "Restrained", "Unconscious"],
     "passivePerception": 10,
     "proficiencyBonus": 3,
     "abilities": {
@@ -199,6 +209,9 @@
         "value": "60 ft."
       }
     ],
+    "damageResistances": ["Acid", "Bludgeoning", "Piercing", "Slashing from Nonmagical Attack"],
+    "damageImmunities": ["Poison"],
+    "conditionImmunities": ["Exhaustion", "Grappled", "Paralyzed", "Petrified", "Poisoned", "Prone", "Restrained", "Unconscious"],
     "passivePerception": 10,
     "proficiencyBonus": 3,
     "abilities": {
