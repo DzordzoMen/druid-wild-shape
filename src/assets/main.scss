@@ -1,0 +1,24 @@
+@import "./base.css";
+
+#app {
+  background-color: #121212;
+  overflow-x: hidden;
+}
+
+.v-popper {
+  &__inner {
+    background: #18181b !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--primary-color);
+  }
+
+  &--theme-tooltip {
+    max-width: 450px;
+    margin: 0 12px;
+  }
+
+  &__arrow-container {
+    display: none;
+  }
+}
