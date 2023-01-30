@@ -4,7 +4,8 @@
     "env.d.ts",
     "src/**/*",
     "src/**/*.vue",
-    "src/assets/books/*.json"
+    "src/assets/books/*.json",
+    "src/assets/*.json"
 ],
   "exclude": ["src/**/__tests__/*"],
   "compilerOptions": {
