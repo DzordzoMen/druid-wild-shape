@@ -47,6 +47,23 @@
           <div class="beast-info-details-item__title">Skills</div>
           <div class="beast-info-details-item__content">
             <ul>
+              <li v-if="hasDamageVulnerabilities">
+                <b>Damage Vulnerabilities</b>
+                {{ beastInfo?.damageVulnerabilities?.join(', ') }}
+              </li>
+              <li v-if="hasDamageResistances">
+                <b>Damage Resistances</b>
+                {{ beastInfo?.damageResistances?.join(', ') }}
+              </li>
+              <li v-if="hasDamageImmunities">
+                <b>Damage Immunities</b>
+                {{ beastInfo?.damageImmunities?.join(', ') }}
+              </li>
+              <li v-if="hasConditionImmunities">
+                <b>Condition Immunities</b>
+                {{ beastInfo?.conditionImmunities?.join(', ') }}
+              </li>
+
               <li v-for="(skill, index) in beastInfo?.skills" :key="index">
                 <b
                   v-tooltip="{
@@ -172,6 +189,22 @@ const beastSpeed = computed((): string | null => {
       ?.map(({ name, valueInFt }) => `${name} ${valueInFt} ft.`)
       ?.join(', ') ?? null
   );
+});
+
+const hasDamageVulnerabilities = computed((): boolean => {
+  return !!beastInfo?.value?.damageVulnerabilities?.length || false;
+});
+
+const hasDamageResistances = computed((): boolean => {
+  return !!beastInfo?.value?.damageResistances?.length || false;
+});
+
+const hasDamageImmunities = computed((): boolean => {
+  return !!beastInfo?.value?.damageImmunities?.length || false;
+});
+
+const hasConditionImmunities = computed((): boolean => {
+  return !!beastInfo?.value?.conditionImmunities?.length || false;
 });
 
 useTitle(`${beastInfo?.value?.name || 'Oops'} | D&D 5 - Druid wild shape`);
