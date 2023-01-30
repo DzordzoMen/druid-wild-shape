@@ -19,6 +19,10 @@ export interface IBeast {
   alignment: Alignment;
   environment: Environment[];
   skills: ISkill[]; // like Darkvision
+  damageVulnerabilities?: string[];
+  damageResistances?: string[];
+  damageImmunities?: string[];
+  conditionImmunities?: string[];
   passivePerception?: number | null;
   proficiencyBonus?: number | null;
   abilities: IAbilities;
