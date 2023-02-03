@@ -106,6 +106,8 @@ header {
   color: var(--color-text);
   z-index: 8;
   display: flex;
+  position: sticky;
+  top: 0;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -136,7 +138,7 @@ header {
 // background: rgba(112, 87, 255, 0.24);
 
 main {
-  height: calc(100vh - 56px);
+  min-height: calc(100vh - 56px);
   padding: 12px;
   overflow-y: auto;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
