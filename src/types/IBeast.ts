@@ -23,6 +23,7 @@ export interface IBeast {
   damageResistances?: string[];
   damageImmunities?: string[];
   conditionImmunities?: string[];
+  languages?: string[];
   passivePerception?: number | null;
   proficiencyBonus?: number | null;
   abilities: IAbilities;
