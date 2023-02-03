@@ -134,8 +134,18 @@ export const useBeastsStore = defineStore('beasts', {
       //   environment.some((val) => selectedEnvs.includes(val))
       // );
 
+      const searchArray: string[] =
+        search
+          ?.replace(/ /g, '')
+          ?.split(',')
+          ?.filter((item) => item) ?? [];
+
+      const regexPattern = `${searchArray.map((word) => `(?=.*?\\b${word})`).join('')}.*`;
+
+      const searchRegex = new RegExp(regexPattern, 'gi');
+
       filteredBeasts = filteredBeasts.filter((beast) =>
-        JSON.stringify(beast).includes(search)
+        searchRegex.test(JSON.stringify(beast))
       );
 
       return filteredBeasts;
