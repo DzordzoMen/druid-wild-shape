@@ -1,0 +1,18 @@
+[
+  {
+    "name": "damageVulnerabilities",
+    "text": "If a beast has vulnerability to a damage type, damage of that type is doubled against it."
+  },
+  {
+    "name": "damageResistances",
+    "text": "If a beast has resistance to a damage type, damage of that type is halved against it."
+  },
+  {
+    "name": "damageImmunities",
+    "text": "Damage immunity means that you take no damage of a specified type."
+  },
+  {
+    "name": "conditionImmunities",
+    "text": ""
+  }
+]
