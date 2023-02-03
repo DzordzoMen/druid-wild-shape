@@ -48,11 +48,31 @@
           <div class="beast-info-details-item__content">
             <ul>
               <li v-if="hasDamageVulnerabilities">
-                <b>Damage Vulnerabilities</b>
+                <b
+                  v-tooltip="{
+                    content: getBeastTooltip('damageVulnerabilities'),
+                    triggers: tooltipTriggers,
+                    disabled: false,
+                    html: true,
+                  }"
+                  tabindex="0"
+                >
+                  Damage Vulnerabilities
+                </b>
                 {{ beastInfo?.damageVulnerabilities?.join(', ') }}
               </li>
               <li v-if="hasDamageResistances">
-                <b>Damage Resistances</b>
+                <b
+                  v-tooltip="{
+                    content: getBeastTooltip('damageResistances'),
+                    triggers: tooltipTriggers,
+                    disabled: false,
+                    html: true,
+                  }"
+                  tabindex="0"
+                >
+                  Damage Resistances
+                </b>
                 {{ beastInfo?.damageResistances?.join(', ') }}
               </li>
               <li v-if="hasDamageImmunities">
@@ -68,7 +88,7 @@
                 <b
                   v-tooltip="{
                     content: getSensesTooltip(skill.name),
-                    triggers: ['hover', 'click', 'focus', 'touch'],
+                    triggers: tooltipTriggers,
                     disabled: !hasSensesTooltip(skill.name),
                     html: true,
                   }"
@@ -131,6 +151,7 @@
 
 <script setup lang="ts">
 import sensesInfo from '@/assets/senses-info.json';
+import tooltipsInfo from '@/assets/beast-tooltips.json';
 
 import { computed, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
@@ -147,16 +168,20 @@ type AbilityItem = {
   baseValue: number;
 };
 
-type SenseTooltip = {
+type TooltipInfo = {
   name: string;
   text: string;
 };
 
-const sensesTooltips = sensesInfo as SenseTooltip[];
+const sensesTooltips = sensesInfo as TooltipInfo[];
+
+const beastTooltips = tooltipsInfo as TooltipInfo[];
 
 const route = useRoute();
 
 const beastModule = useBeastsStore();
+
+const tooltipTriggers: string[] = ['hover', 'click', 'focus', 'touch'];
 
 const beastName: string = route.params.beastName as string;
 
@@ -233,6 +258,14 @@ function getSensesTooltip(senseName: string): string | undefined {
 
 function hasSensesTooltip(senseName: string): boolean {
   return !!getSensesTooltip(senseName);
+}
+
+function getBeastTooltip(tooltipName: string): string | undefined {
+  const beastTooltip = beastTooltips?.find(
+    (sense) => sense.name.toLowerCase() === tooltipName?.toLowerCase()
+  );
+
+  return beastTooltip?.text ?? undefined;
 }
 </script>
 
