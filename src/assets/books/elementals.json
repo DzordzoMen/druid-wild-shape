@@ -28,6 +28,7 @@
     "damageResistances": ["Lightning", "Thunder", "Bludgeoning", "Piercing", "Slashing from Nonmagical Attack"],
     "damageImmunities": ["Poison"],
     "conditionImmunities": ["Exhaustion", "Grappled", "Paralyzed", "Petrified", "Poisoned", "Prone", "Restrained", "Unconscious"],
+    "languages": ["Auran"],
     "passivePerception": 19,
     "proficiencyBonus": 3,
     "abilities": {
@@ -93,6 +94,7 @@
     "damageResistances": ["Bludgeoning", "Piercing", "Slashing from Nonmagical Attack"],
     "damageImmunities": ["Poison"],
     "conditionImmunities": ["Exhaustion", "Paralyzed", "Petrified", "Poisoned", "Unconscious"],
+    "languages": ["Terran"],
     "passivePerception": 10,
     "proficiencyBonus": 3,
     "abilities": {
@@ -149,6 +151,7 @@
     "damageResistances": ["Bludgeoning", "Piercing", "Slashing from Nonmagical Attack"],
     "damageImmunities": ["Fire", "Poison"],
     "conditionImmunities": ["Exhaustion", "Grappled", "Paralyzed", "Petrified", "Poisoned", "Prone", "Restrained", "Unconscious"],
+    "languages": ["Ignan"],
     "passivePerception": 10,
     "proficiencyBonus": 3,
     "abilities": {
@@ -212,6 +215,7 @@
     "damageResistances": ["Acid", "Bludgeoning", "Piercing", "Slashing from Nonmagical Attack"],
     "damageImmunities": ["Poison"],
     "conditionImmunities": ["Exhaustion", "Grappled", "Paralyzed", "Petrified", "Poisoned", "Prone", "Restrained", "Unconscious"],
+    "languages": ["Aquan"],
     "passivePerception": 10,
     "proficiencyBonus": 3,
     "abilities": {
