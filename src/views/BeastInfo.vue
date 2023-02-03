@@ -79,6 +79,12 @@
                 </b>
                 {{ skill?.value }}
               </li>
+
+              <li v-if="hasLanguages">
+                <b>Languages</b>
+                {{ beastInfo?.languages?.join(', ') }}
+              </li>
+
               <li>
                 <b>Passive perception</b>
                 {{ beastInfo?.passivePerception }}
@@ -205,6 +211,10 @@ const hasDamageImmunities = computed((): boolean => {
 
 const hasConditionImmunities = computed((): boolean => {
   return !!beastInfo?.value?.conditionImmunities?.length || false;
+});
+
+const hasLanguages = computed((): boolean => {
+  return !!beastInfo?.value?.languages?.length || false;
 });
 
 useTitle(`${beastInfo?.value?.name || 'Oops'} | D&D 5 - Druid wild shape`);
