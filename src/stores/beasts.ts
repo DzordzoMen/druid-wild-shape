@@ -142,7 +142,7 @@ export const useBeastsStore = defineStore('beasts', {
 
       const regexPattern = `${searchArray.map((word) => `(?=.*?\\b${word})`).join('')}.*`;
 
-      const searchRegex = new RegExp(regexPattern, 'gi');
+      const searchRegex = new RegExp(regexPattern, 'i');
 
       filteredBeasts = filteredBeasts.filter((beast) =>
         searchRegex.test(JSON.stringify(beast))
