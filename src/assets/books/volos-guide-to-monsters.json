@@ -1,1 +1,278 @@
-[]
+[
+  {
+    "name": "Aurochs",
+    "hitPoints": 38,
+    "hitPointsInfo": "4d10+16",
+    "armorClass": 11,
+    "challenge": "2",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 50
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": ["Grassland"],
+    "skills": [],
+    "passivePerception": 11,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 20,
+      "dexterity": 10,
+      "constitution": 19,
+      "intelligence": 2,
+      "wisdom": 12,
+      "charisma": 5
+    },
+    "traits": [
+      {
+        "name": "Charge",
+        "description": "If the aurochs moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Deep rothé",
+    "hitPoints": 13,
+    "hitPointsInfo": "2d8+4",
+    "armorClass": 10,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": ["Underdark"],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "60 ft."
+      }
+    ],
+    "passivePerception": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 18,
+      "dexterity": 10,
+      "constitution": 14,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 4
+    },
+    "traits": [
+      {
+        "name": "Charge",
+        "description": "If the deep rothé moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "description": "The deep rothe's spellcasting ability is Charisma. It can innately cast dancing lights at will, requiring no components."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Dolphin",
+    "hitPoints": 11,
+    "hitPointsInfo": "2d8+2",
+    "armorClass": 12,
+    "challenge": "1/8",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 0
+      },
+      {
+        "name": "Swim",
+        "valueInFt": 60
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": ["Underwater"],
+    "skills": [
+      {
+        "name": "Blindsight",
+        "value": "60 ft."
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 14,
+      "dexterity": 13,
+      "constitution": 13,
+      "intelligence": 6,
+      "wisdom": 12,
+      "charisma": 7
+    },
+    "traits": [
+      {
+        "name": "Charge",
+        "description": "If the dolphin moves at least 30 feet straight toward a target and then hits it with a slam attack on the same turn, the target takes an extra 3 (1d6) bludgeoning damage."
+      },
+      {
+        "name": "Hold Breath",
+        "description": "The dolphin can hold its breath for 20 minutes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage."
+      }
+    ]
+  },
+  {
+    "name": "Ox",
+    "description": "An ox is mainly used for draft work rather than meat or milk.",
+    "hitPoints": 15,
+    "hitPointsInfo": "2d10+4",
+    "armorClass": 10,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": ["Urban", "Hill", "Grassland"],
+    "skills": [],
+    "passivePerception": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 18,
+      "dexterity": 10,
+      "constitution": 14,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 4
+    },
+    "traits": [
+      {
+        "name": "Beast of Burden",
+        "description": "The oxen is considered to be a Huge animal for the purpose of determining its carrying capacity."
+      },
+      {
+        "name": "Charge",
+        "description": "If the ox moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Rothé",
+    "hitPoints": 15,
+    "hitPointsInfo": "2d10+4",
+    "armorClass": 10,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": ["Hill", "Arctic"],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "30 ft."
+      }
+    ],
+    "passivePerception": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 18,
+      "dexterity": 10,
+      "constitution": 14,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 4
+    },
+    "traits": [
+      {
+        "name": "Charge",
+        "description": "If the rothé moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Cranium Rat",
+    "hitPoints": 2,
+    "hitPointsInfo": "1d4",
+    "armorClass": 12,
+    "challenge": "0",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Tiny",
+    "alignment": "LE",
+    "environment": ["Underdark"],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "30 ft."
+      }
+    ],
+    "languages": ["Telepathy 30 ft."],
+    "passivePerception": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 2,
+      "dexterity": 14,
+      "constitution": 10,
+      "intelligence": 4,
+      "wisdom": 11,
+      "charisma": 8
+    },
+    "traits": [
+      {
+        "name": "Illumination",
+        "description": "As a bonus action, the cranium rat can shed dim light from its brain in a 5-foot radius or extinguish the light."
+      },
+      {
+        "name": "Telepathic Shroud",
+        "description": "The cranium rat is immune to any effect that would sense its emotions or read its thoughts, as well as to all divination spells."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 1 piercing damage."
+      }
+    ]
+  }
+]
