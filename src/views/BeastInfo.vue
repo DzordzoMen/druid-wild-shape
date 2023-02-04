@@ -211,7 +211,7 @@ const beastDescription = computed((): string | undefined => {
 });
 
 const beastEnvironments = computed((): string | null => {
-  return beastInfo.value?.environment?.join(',') ?? null;
+  return beastInfo.value?.environment?.join(', ') ?? null;
 });
 
 const beastSpeed = computed((): string | null => {
