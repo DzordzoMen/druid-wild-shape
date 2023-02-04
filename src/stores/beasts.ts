@@ -129,10 +129,10 @@ export const useBeastsStore = defineStore('beasts', {
       filteredBeasts = filteredBeasts.filter(({ speed }) =>
         speed.map((item) => item.name).some((val) => selectedMoves.includes(val))
       );
-      // TODO add envs to beasts
-      // filteredBeasts = filteredBeasts.filter(({ environment }) =>
-      //   environment.some((val) => selectedEnvs.includes(val))
-      // );
+
+      filteredBeasts = filteredBeasts.filter(({ environment }) =>
+        environment.some((val) => selectedEnvs.includes(val))
+      );
 
       const searchArray: string[] =
         search
