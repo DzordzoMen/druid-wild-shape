@@ -1,6 +1,6 @@
 export enum Environment {
   Arctic = 'Arctic',
-  Coastal = 'Coastal',
+  Coast = 'Coast',
   Desert = 'Desert',
   Forest = 'Forest',
   Grassland = 'Grassland',
