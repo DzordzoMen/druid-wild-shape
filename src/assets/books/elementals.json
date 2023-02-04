@@ -18,7 +18,7 @@
     ],
     "size": "Large",
     "alignment": "N",
-    "environment": [],
+    "environment": ["Desert", "Mountain"],
     "skills": [
       {
         "name": "Darkvision",
@@ -79,7 +79,7 @@
     ],
     "size": "Large",
     "alignment": "N",
-    "environment": [],
+    "environment": ["Underdark"],
     "skills": [
       {
         "name": "Darkvision",
@@ -141,7 +141,7 @@
     ],
     "size": "Large",
     "alignment": "N",
-    "environment": [],
+    "environment": ["Desert"],
     "skills": [
       {
         "name": "Darkvision",
@@ -205,7 +205,7 @@
     ],
     "size": "Large",
     "alignment": "N",
-    "environment": [],
+    "environment": ["Coast", "Swamp", "Underwater"],
     "skills": [
       {
         "name": "Darkvision",
