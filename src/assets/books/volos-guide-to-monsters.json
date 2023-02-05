@@ -227,55 +227,6 @@
     ]
   },
   {
-    "name": "Cranium Rat",
-    "hitPoints": 2,
-    "hitPointsInfo": "1d4",
-    "armorClass": 12,
-    "challenge": "0",
-    "speed": [
-      {
-        "name": "Walk",
-        "valueInFt": 30
-      }
-    ],
-    "size": "Tiny",
-    "alignment": "LE",
-    "environment": ["Urban", "Underdark"],
-    "skills": [
-      {
-        "name": "Darkvision",
-        "value": "30 ft."
-      }
-    ],
-    "languages": ["Telepathy 30 ft."],
-    "passivePerception": 10,
-    "proficiencyBonus": 2,
-    "abilities": {
-      "strength": 2,
-      "dexterity": 14,
-      "constitution": 10,
-      "intelligence": 4,
-      "wisdom": 11,
-      "charisma": 8
-    },
-    "traits": [
-      {
-        "name": "Illumination",
-        "description": "As a bonus action, the cranium rat can shed dim light from its brain in a 5-foot radius or extinguish the light."
-      },
-      {
-        "name": "Telepathic Shroud",
-        "description": "The cranium rat is immune to any effect that would sense its emotions or read its thoughts, as well as to all divination spells."
-      }
-    ],
-    "actions": [
-      {
-        "name": "Bite",
-        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 1 piercing damage."
-      }
-    ]
-  },
-  {
     "name": "Dimetrodon",
     "hitPoints": 19,
     "hitPointsInfo": "3d8+6",
