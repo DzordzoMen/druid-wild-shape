@@ -20,6 +20,13 @@ const router = createRouter({
       component: BeastInfo,
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition && to.name !== 'BeastInfo') {
+      return savedPosition;
+    } else {
+      return { top: 0 };
+    }
+  },
 });
 
 export default router;
