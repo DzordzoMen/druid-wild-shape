@@ -9,12 +9,12 @@ import getNameLink from '@/utils/getNameLink';
 
 import elementals from '@/assets/books/elementals.json';
 import mmBeasts from '@/assets/books/monster-manual.json';
-import tomeOfFoes from '@/assets/books/tome-of-foes.json';
+import monstersOfTheMultiverse from '@/assets/books/monsters-of-the-multiverse.json';
 import voloGuideToMonsters from '@/assets/books/volos-guide-to-monsters.json';
 
 interface State {
   monsterManualBeasts: IBeast[];
-  tomeOfFoesBeasts: IBeast[];
+  monstersOfTheMultiverseBeasts: IBeast[];
   voloBeasts: IBeast[];
   elementals: IBeast[];
 }
@@ -22,15 +22,25 @@ interface State {
 export const useBeastsStore = defineStore('beasts', {
   state: (): State => ({
     monsterManualBeasts: mmBeasts as IBeast[],
-    tomeOfFoesBeasts: tomeOfFoes as IBeast[],
+    monstersOfTheMultiverseBeasts: monstersOfTheMultiverse as IBeast[],
     voloBeasts: voloGuideToMonsters as IBeast[],
     elementals: elementals as IBeast[],
   }),
   getters: {
     allBeasts(state): IBeast[] {
-      const { monsterManualBeasts, tomeOfFoesBeasts, voloBeasts, elementals } = state;
+      const {
+        monsterManualBeasts,
+        monstersOfTheMultiverseBeasts,
+        voloBeasts,
+        elementals,
+      } = state;
 
-      return [...monsterManualBeasts, ...tomeOfFoesBeasts, ...voloBeasts, ...elementals];
+      return [
+        ...monsterManualBeasts,
+        ...monstersOfTheMultiverseBeasts,
+        ...voloBeasts,
+        ...elementals,
+      ];
     },
     getBeastDataByName(): (beastName: string) => IBeast | undefined {
       return (beastName: string) =>
@@ -77,7 +87,7 @@ export const useBeastsStore = defineStore('beasts', {
       return moonDruid && level >= 10;
     },
     availableBeastsFromSelectedBooks(state): IBeast[] {
-      const { monsterManualBeasts, tomeOfFoesBeasts, voloBeasts } = state;
+      const { monsterManualBeasts, monstersOfTheMultiverseBeasts, voloBeasts } = state;
       const druidOptionsModule = useDruidOptionsStore();
 
       const usedHandbooks = druidOptionsModule.selectedBooks;
@@ -85,7 +95,7 @@ export const useBeastsStore = defineStore('beasts', {
 
       if (usedHandbooks?.includes('MM')) result.push(...monsterManualBeasts);
       if (usedHandbooks?.includes('GtM')) result.push(...voloBeasts);
-      if (usedHandbooks?.includes('ToF')) result.push(...tomeOfFoesBeasts);
+      if (usedHandbooks?.includes('MotM')) result.push(...monstersOfTheMultiverseBeasts);
 
       return result;
     },

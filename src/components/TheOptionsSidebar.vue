@@ -46,8 +46,8 @@ const items: IChipGroupItem[] = [
     value: 'GtM',
   },
   {
-    text: `Mordenkainen's Tome of Foes`,
-    value: 'ToF',
+    text: `Monsters of the Multiverse`,
+    value: 'MotM',
   },
 ];
 

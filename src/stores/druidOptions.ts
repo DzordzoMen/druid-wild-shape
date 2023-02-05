@@ -10,7 +10,7 @@ interface State {
 export const useDruidOptionsStore = defineStore('druid-options', {
   state: (): State => ({
     druidLevel: useStorage('druid-level', ''),
-    selectedBooks: useStorage('used-handbooks', ['MM', 'GtM', 'ToF']),
+    selectedBooks: useStorage('used-handbooks', ['MM', 'GtM', 'MotM']),
     moonDruid: useStorage('moon-druid', true),
   }),
   actions: {
