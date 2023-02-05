@@ -13,7 +13,7 @@
     ],
     "size": "Large",
     "alignment": "UN",
-    "environment": ["Grassland"],
+    "environment": ["Grassland", "Hill", "Mountain"],
     "skills": [],
     "passivePerception": 11,
     "proficiencyBonus": 2,
@@ -104,7 +104,7 @@
     ],
     "size": "Medium",
     "alignment": "UN",
-    "environment": ["Underwater"],
+    "environment": ["Coast", "Underwater"],
     "skills": [
       {
         "name": "Blindsight",
@@ -153,7 +153,7 @@
     ],
     "size": "Large",
     "alignment": "UN",
-    "environment": ["Urban", "Hill", "Grassland"],
+    "environment": ["Urban"],
     "skills": [],
     "passivePerception": 10,
     "proficiencyBonus": 2,
@@ -196,7 +196,7 @@
     ],
     "size": "Large",
     "alignment": "UN",
-    "environment": ["Hill", "Arctic"],
+    "environment": ["Grassland"],
     "skills": [
       {
         "name": "Darkvision",
@@ -240,7 +240,7 @@
     ],
     "size": "Tiny",
     "alignment": "LE",
-    "environment": ["Underdark"],
+    "environment": ["Urban", "Underdark"],
     "skills": [
       {
         "name": "Darkvision",
@@ -293,7 +293,7 @@
     ],
     "size": "Medium",
     "alignment": "UN",
-    "environment": ["Swamp"],
+    "environment": ["Coast", "Swamp"],
     "skills": [
 
       {
@@ -333,7 +333,7 @@
     ],
     "size": "Gargantuan",
     "alignment": "UN",
-    "environment": ["Hill", "Forest", "Grassland"],
+    "environment": ["Forest", "Grassland"],
     "skills": [],
     "passivePerception": 10,
     "proficiencyBonus": 2,
@@ -423,7 +423,7 @@
     ],
     "size": "Large",
     "alignment": "UN",
-    "environment": ["Hill", "Forest", "Grassland"],
+    "environment": ["Forest", "Grassland", "Swamp"],
     "skills": [
       {
         "name": "Perception",
@@ -466,7 +466,7 @@
     ],
     "size": "Huge",
     "alignment": "UN",
-    "environment": ["Hill", "Forest", "Grassland", "Mountain"],
+    "environment": ["Coast", "Hill", "Forest", "Mountain"],
     "skills": [
       {
         "name": "Perception",
@@ -514,7 +514,7 @@
     ],
     "size": "Huge",
     "alignment": "UN",
-    "environment": ["Hill", "Forest", "Grassland"],
+    "environment": ["Forest", "Grassland"],
     "skills": [],
     "passivePerception": 10,
     "proficiencyBonus": 2,
@@ -548,7 +548,7 @@
     ],
     "size": "Tiny",
     "alignment": "UN",
-    "environment": ["Coast", "Forest", "Grassland", "Hill", "Mountain"],
+    "environment": ["Forest", "Grassland", "Hill"],
     "skills": [
       {
         "name": "Perception",
