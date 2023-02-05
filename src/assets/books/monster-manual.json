@@ -194,7 +194,7 @@
     ],
     "size": "Tiny",
     "alignment": "UN",
-    "environment": ["Forest", "Underdark"],
+    "environment": ["Forest", "Underdark", "Hill", "Mountain", "Urban"],
     "skills": [
       {
         "name": "Blindsight",
@@ -393,7 +393,7 @@
     ],
     "size": "Large",
     "alignment": "UN",
-    "environment": ["Arctic", "Hill"],
+    "environment": ["Arctic", "Forest", "Hill"],
     "skills": [
       {
         "name": "Perception",
@@ -483,7 +483,7 @@
     ],
     "size": "Tiny",
     "alignment": "UN",
-    "environment": ["Desert", "Forest", "Grassland"],
+    "environment": ["Urban", "Desert", "Forest", "Grassland"],
     "skills": [
       {
         "name": "Stealth",
@@ -634,7 +634,7 @@
     ],
     "size": "Large",
     "alignment": "UN",
-    "environment": ["Swamp"],
+    "environment": ["Swamp", "Urban"],
     "skills": [
       {
         "name": "Stealth",
@@ -941,7 +941,7 @@
     ],
     "size": "Tiny",
     "alignment": "UN",
-    "environment": ["Desert", "Forest", "Grassland"],
+    "environment": ["Desert", "Forest", "Grassland", "Urban"],
     "skills": [
       {
         "name": "Blindsight",
@@ -1251,7 +1251,7 @@
     ],
     "size": "Small",
     "alignment": "UN",
-    "environment": ["Underdark"],
+    "environment": ["Underdark", "Urban"],
     "skills": [
       {
         "name": "Blindsight",
@@ -1920,7 +1920,7 @@
     ],
     "size": "Medium",
     "alignment": "UN",
-    "environment": ["Desert", "Forest", "Grassland", "Swamp", "Underdark"],
+    "environment": ["Desert", "Forest", "Grassland", "Swamp", "Underdark", "Urban"],
     "skills": [
       {
         "name": "Blindsight",
@@ -1963,7 +1963,7 @@
     ],
     "size": "Small",
     "alignment": "UN",
-    "environment": ["Forest", "Swamp", "Underdark"],
+    "environment": ["Forest", "Swamp", "Underdark", "Urban"],
     "skills": [
       {
         "name": "Darkvision",
@@ -2349,7 +2349,7 @@
     ],
     "size": "Medium",
     "alignment": "UN",
-    "environment": ["Grassland"],
+    "environment": ["Forest", "Grassland", "Urban"],
     "skills": [],
     "passivePerception": 10,
     "proficiencyBonus": 0,
@@ -2504,7 +2504,7 @@
     ],
     "size": "Medium",
     "alignment": "UN",
-    "environment": ["Grassland", "Hill", "Mountain"],
+    "environment": ["Grassland", "Hill", "Mountain", "Urban"],
     "skills": [],
     "passivePerception": 10,
     "proficiencyBonus": 0,
@@ -2948,7 +2948,7 @@
     ],
     "size": "Medium",
     "alignment": "UN",
-    "environment": ["Forest", "Hill"],
+    "environment": ["Forest", "Hill", "Urban"],
     "skills": [
       {
         "name": "Perception",
@@ -2992,7 +2992,7 @@
     ],
     "size": "Medium",
     "alignment": "UN",
-    "environment": ["Desert", "Hill"],
+    "environment": ["Desert", "Hill", "Urban"],
     "skills": [],
     "passivePerception": 10,
     "proficiencyBonus": 0,
@@ -3167,7 +3167,7 @@
     ],
     "size": "Medium",
     "alignment": "UN",
-    "environment": ["Forest"],
+    "environment": ["Forest", "Grassland", "Hill"],
     "skills": [
       {
         "name": "Perception",
@@ -3270,7 +3270,7 @@
     ],
     "size": "Large",
     "alignment": "UN",
-    "environment": ["Arctic"],
+    "environment": ["Arctic", "Underdark"],
     "skills": [
       {
         "name": "Perception",
@@ -3405,7 +3405,7 @@
     ],
     "size": "Tiny",
     "alignment": "UN",
-    "environment": ["Urban", "Swamp"],
+    "environment": ["Swamp", "Urban"],
     "skills": [
       {
         "name": "Darkvision",
@@ -3453,7 +3453,7 @@
     ],
     "size": "Tiny",
     "alignment": "UN",
-    "environment": ["Hill", "Swamp"],
+    "environment": ["Hill", "Swamp", "Forest", "Urban"],
     "skills": [
       {
         "name": "Perception",
@@ -3589,7 +3589,7 @@
     ],
     "size": "Large",
     "alignment": "UN",
-    "environment": ["Grassland"],
+    "environment": ["Grassland", "Urban"],
     "skills": [],
     "passivePerception": 10,
     "proficiencyBonus": 0,
@@ -3876,7 +3876,7 @@
     ],
     "size": "Medium",
     "alignment": "UN",
-    "environment": ["Grassland", "Hill"],
+    "environment": ["Desert", "Grassland", "Hill"],
     "skills": [
       {
         "name": "Perception",
