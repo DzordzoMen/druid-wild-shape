@@ -1,1 +1,540 @@
-[]
+[
+  {
+    "name": "Aurochs",
+    "hitPoints": 38,
+    "hitPointsInfo": "4d10+16",
+    "armorClass": 11,
+    "challenge": "2",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 50
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": ["Grassland", "Hill", "Mountain"],
+    "skills": [],
+    "passivePerception": 11,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 20,
+      "dexterity": 10,
+      "constitution": 19,
+      "intelligence": 2,
+      "wisdom": 12,
+      "charisma": 5
+    },
+    "traits": [
+      {
+        "name": "Charge",
+        "description": "If the aurochs moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 9 (2d8) piercing damage. If the target is a creature, it must succeed on a DC 15 Strength saving throw or be knocked prone."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "description": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 14 (2d8 + 5) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Deep rothé",
+    "hitPoints": 13,
+    "hitPointsInfo": "2d8+4",
+    "armorClass": 10,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": ["Underdark"],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "60 ft."
+      }
+    ],
+    "passivePerception": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 18,
+      "dexterity": 10,
+      "constitution": 14,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 4
+    },
+    "traits": [
+      {
+        "name": "Charge",
+        "description": "If the deep rothé moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage."
+      },
+      {
+        "name": "Innate Spellcasting",
+        "description": "The deep rothe's spellcasting ability is Charisma. It can innately cast dancing lights at will, requiring no components."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Dolphin",
+    "hitPoints": 11,
+    "hitPointsInfo": "2d8+2",
+    "armorClass": 12,
+    "challenge": "1/8",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 0
+      },
+      {
+        "name": "Swim",
+        "valueInFt": 60
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": ["Coast", "Underwater"],
+    "skills": [
+      {
+        "name": "Blindsight",
+        "value": "60 ft."
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 14,
+      "dexterity": 13,
+      "constitution": 13,
+      "intelligence": 6,
+      "wisdom": 12,
+      "charisma": 7
+    },
+    "traits": [
+      {
+        "name": "Charge",
+        "description": "If the dolphin moves at least 30 feet straight toward a target and then hits it with a slam attack on the same turn, the target takes an extra 3 (1d6) bludgeoning damage."
+      },
+      {
+        "name": "Hold Breath",
+        "description": "The dolphin can hold its breath for 20 minutes."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Slam",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 5 (1d6 + 2) bludgeoning damage."
+      }
+    ]
+  },
+  {
+    "name": "Ox",
+    "description": "An ox is mainly used for draft work rather than meat or milk.",
+    "hitPoints": 15,
+    "hitPointsInfo": "2d10+4",
+    "armorClass": 10,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": ["Urban"],
+    "skills": [],
+    "passivePerception": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 18,
+      "dexterity": 10,
+      "constitution": 14,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 4
+    },
+    "traits": [
+      {
+        "name": "Beast of Burden",
+        "description": "The oxen is considered to be a Huge animal for the purpose of determining its carrying capacity."
+      },
+      {
+        "name": "Charge",
+        "description": "If the ox moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Rothé",
+    "hitPoints": 15,
+    "hitPointsInfo": "2d10+4",
+    "armorClass": 10,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": ["Grassland"],
+    "skills": [
+      {
+        "name": "Darkvision",
+        "value": "30 ft."
+      }
+    ],
+    "passivePerception": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 18,
+      "dexterity": 10,
+      "constitution": 14,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 4
+    },
+    "traits": [
+      {
+        "name": "Charge",
+        "description": "If the rothé moves at least 20 feet straight toward a target and then hits it with a gore attack on the same turn, the target takes an extra 7 (2d6) piercing damage."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Gore",
+        "description": "Melee Weapon Attack: +6 to hit, reach 5 ft., one target. Hit: 7 (1d6 + 4) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Dimetrodon",
+    "hitPoints": 19,
+    "hitPointsInfo": "3d8+6",
+    "armorClass": 12,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      },
+      {
+        "name": "Swim",
+        "valueInFt": 20
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": ["Coast", "Swamp"],
+    "skills": [
+
+      {
+        "name": "Perception",
+        "value": "+2"
+      }
+    ],
+    "passivePerception": 12,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 14,
+      "dexterity": 10,
+      "constitution": 15,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 5
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 9 (2d6+2) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Brontosaurus",
+    "hitPoints": 121,
+    "hitPointsInfo": "9d20+27",
+    "armorClass": 15,
+    "challenge": "5",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Gargantuan",
+    "alignment": "UN",
+    "environment": ["Forest", "Grassland"],
+    "skills": [],
+    "passivePerception": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 21,
+      "dexterity": 9,
+      "constitution": 17,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 7
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Stomp",
+        "description": "Melee Weapon Attack: +8 to hit, reach 20 ft., one target. Hit: 27 (5d8+5) bludgeoning damage, and the target must succeed on a DC 14 Strength saving throw or be knocked prone."
+      },
+      {
+        "name": "Tail",
+        "description": "Melee Weapon Attack: +8 to hit, reach 20 ft., one target. Hit: 32 (6d8+5) bludgeoning damage."
+      }
+    ]
+  },
+  {
+    "name": "Deinonychus",
+    "hitPoints": 26,
+    "hitPointsInfo": "4d8+8",
+    "armorClass": 13,
+    "challenge": "1",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Medium",
+    "alignment": "UN",
+    "environment": ["Hill", "Forest", "Grassland"],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+3"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 15,
+      "dexterity": 15,
+      "constitution": 14,
+      "intelligence": 4,
+      "wisdom": 12,
+      "charisma": 6
+    },
+    "traits": [
+      {
+        "name": "Pounce",
+        "description": "If the deinonychus moves at least 20 feet straight toward a creature and then hits it with a claw attack on the same turn, that target must succeed on a DC 12 Strength saving throw or be knocked prone. If the target is prone, the deinonychus can make one bite attack against it as a bonus action."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The deinonychus makes three attacks: one with its bite and two with its claws."
+      },
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8+2) piercing damage."
+      },
+      {
+        "name": "Claw",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 6 (1d8+2) slashing damage."
+      }
+    ]
+  },
+  {
+    "name": "Hadrosaurus",
+    "hitPoints": 19,
+    "hitPointsInfo": "3d10+3",
+    "armorClass": 11,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Large",
+    "alignment": "UN",
+    "environment": ["Forest", "Grassland", "Swamp"],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+2"
+      }
+    ],
+    "passivePerception": 12,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 15,
+      "dexterity": 10,
+      "constitution": 13,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 5
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Tail",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 7 (1d10+2) bludgeoning damage."
+      }
+    ]
+  },
+  {
+    "name": "Quetzalcoatlus",
+    "hitPoints": 30,
+    "hitPointsInfo": "4d12+4",
+    "armorClass": 13,
+    "challenge": "2",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 10
+      },
+      {
+        "name": "Fly",
+        "valueInFt": 80
+      }
+    ],
+    "size": "Huge",
+    "alignment": "UN",
+    "environment": ["Coast", "Hill", "Forest", "Mountain"],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+2"
+      }
+    ],
+    "passivePerception": 12,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 15,
+      "dexterity": 13,
+      "constitution": 13,
+      "intelligence": 2,
+      "wisdom": 10,
+      "charisma": 5
+    },
+    "traits": [
+      {
+        "name": "Dive Attack",
+        "description": "If the quetzalcoatlus is flying and dives at least 30 feet toward a target and then hits with a bite attack, the attack deals an extra 10 (3d6) damage to the target."
+      },
+      {
+        "name": "Flyby",
+        "description": "The quetzalcoatlus doesn’t provoke an opportunity attack when it flies out of an enemy’s reach."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +4 to hit, reach 10 ft., one creature. Hit: 12 (3d6+2) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Stegosaurus",
+    "hitPoints": 76,
+    "hitPointsInfo": "8d12+24",
+    "armorClass": 13,
+    "challenge": "4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 40
+      }
+    ],
+    "size": "Huge",
+    "alignment": "UN",
+    "environment": ["Forest", "Grassland"],
+    "skills": [],
+    "passivePerception": 10,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 20,
+      "dexterity": 9,
+      "constitution": 17,
+      "intelligence": 2,
+      "wisdom": 11,
+      "charisma": 5
+    },
+    "traits": [],
+    "actions": [
+      {
+        "name": "Tail",
+        "description": "Melee Weapon Attack: +7 to hit, reach 10 ft., one target. Hit: 26(6d6+5) piercing damage."
+      }
+    ]
+  },
+  {
+    "name": "Velociraptor",
+    "hitPoints": 10,
+    "hitPointsInfo": "3d4+3",
+    "armorClass": 13,
+    "challenge": "1/4",
+    "speed": [
+      {
+        "name": "Walk",
+        "valueInFt": 30
+      }
+    ],
+    "size": "Tiny",
+    "alignment": "UN",
+    "environment": ["Forest", "Grassland", "Hill"],
+    "skills": [
+      {
+        "name": "Perception",
+        "value": "+3"
+      }
+    ],
+    "passivePerception": 13,
+    "proficiencyBonus": 2,
+    "abilities": {
+      "strength": 6,
+      "dexterity": 14,
+      "constitution": 13,
+      "intelligence": 4,
+      "wisdom": 12,
+      "charisma": 6
+    },
+    "traits": [
+      {
+        "name": "Pack Tactics",
+        "description": "The velociraptor has advantage on an attack roll against a creature if at least one of the velociraptor’s allies is within 5 feet of the creature and the ally isn’t incapacitated."
+      }
+    ],
+    "actions": [
+      {
+        "name": "Multiattack",
+        "description": "The velociraptor makes two attacks: one with its bite and one with its claws."
+      },
+      {
+        "name": "Bite",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one creature. Hit: 5 (1d6+2) piercing damage."
+      },
+      {
+        "name": "Claws",
+        "description": "Melee Weapon Attack: +4 to hit, reach 5 ft., one target. Hit: 4 (1d4+2) slashing damage."
+      }
+    ]
+  }
+]
