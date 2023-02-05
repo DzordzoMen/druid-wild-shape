@@ -95,7 +95,10 @@ export const useBeastsStore = defineStore('beasts', {
 
       if (usedHandbooks?.includes('MM')) result.push(...monsterManualBeasts);
       if (usedHandbooks?.includes('GtM')) result.push(...voloBeasts);
-      if (usedHandbooks?.includes('MotM')) result.push(...monstersOfTheMultiverseBeasts);
+      // used to removed duplicated = MotM has 1:1 list of best like GtM
+      if (usedHandbooks?.includes('MotM') && !usedHandbooks?.includes('GtM')) {
+        result.push(...monstersOfTheMultiverseBeasts);
+      }
 
       return result;
     },
