@@ -11,7 +11,7 @@ export default defineConfig({
     VitePWA({
       registerType: 'autoUpdate',
       devOptions: {
-        enabled: true, // TODO remove
+        enabled: false, // INFO only for dev purpose
       },
       manifest: {
         name: 'Druid Wild Shape',
