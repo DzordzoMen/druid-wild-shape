@@ -1028,61 +1028,6 @@
     "actions": []
   },
   {
-    "name": "Giant Ape",
-    "hitPoints": 157,
-    "hitPointsInfo": "15d12+60",
-    "armorClass": 12,
-    "challenge": "7",
-    "speed": [
-      {
-        "name": "Walk",
-        "valueInFt": 40
-      },
-      {
-        "name": "Climb",
-        "valueInFt": 40
-      }
-    ],
-    "size": "Huge",
-    "alignment": "UN",
-    "environment": ["Forest"],
-    "skills": [
-      {
-        "name": "Athletics",
-        "value": "+9"
-      },
-      {
-        "name": "Perception",
-        "value": "+4"
-      }
-    ],
-    "passivePerception": 14,
-    "proficiencyBonus": 0,
-    "abilities": {
-      "strength": 23,
-      "dexterity": 14,
-      "constitution": 18,
-      "intelligence": 7,
-      "wisdom": 12,
-      "charisma": 7
-    },
-    "traits": [],
-    "actions": [
-      {
-        "name": "Multiattack",
-        "description": "The ape makes two fist Attacks."
-      },
-      {
-        "name": "Fist",
-        "description": "Melee Weapon Attack: +9 to hit, reach 10 ft., one target. Hit: (3d10 + 6) bludgeoning damage."
-      },
-      {
-        "name": "Rock",
-        "description": "Ranged Weapon Attack: +9 to hit, reach 50/100 ft., one target. Hit: (7d6 + 6) bludgeoning damage."
-      }
-    ]
-  },
-  {
     "name": "Giant Badger",
     "hitPoints": 13,
     "hitPointsInfo": "2d8+4",
