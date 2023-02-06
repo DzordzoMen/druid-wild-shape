@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/57a23461-e152-4e8d-9f20-83c68256c244/deploy-status)](https://app.netlify.com/sites/druid-wild-shape/deploys)
+
 # .
 
 This template should help get you started developing with Vue 3 in Vite.
