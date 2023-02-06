@@ -130,12 +130,6 @@ header {
     }
   }
 }
-// background: linear-gradient(to bottom, #000000 0%, #390967 20%, #574595 100%) !important
-// #7668cb
-// #8678d7
-
-// background: rgba(112, 87, 255, 0.18);
-// background: rgba(112, 87, 255, 0.24);
 
 main {
   min-height: calc(100vh - 56px);
