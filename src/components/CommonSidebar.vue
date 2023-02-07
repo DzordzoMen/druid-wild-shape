@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { onClickOutside } from '@vueuse/core';
-import { useBreakpoints } from '@vueuse/core';
+import { onClickOutside, useBreakpoints, usePointerSwipe } from '@vueuse/core';
+import { SwipeDirection } from '@vueuse/core';
 
 const breakpoints = useBreakpoints({
   tablet: 640,
@@ -29,7 +29,7 @@ const props = defineProps({
 
 const emit = defineEmits(['update:show']);
 
-const sidebarRef = ref(null);
+const sidebarRef = ref<HTMLElement | null>(null);
 
 const transitionName = computed(() => {
   const { left, right } = props;
@@ -40,8 +40,27 @@ const transitionName = computed(() => {
   return 'left';
 });
 
+const containerWidth = computed(() => sidebarRef.value?.offsetWidth ?? 0);
+
 onClickOutside(sidebarRef, () => {
   if (breakpoints.smallerOrEqual('tablet').value) emit('update:show', false);
+});
+
+const { distanceX } = usePointerSwipe(sidebarRef, {
+  onSwipeEnd(e: PointerEvent, direction: SwipeDirection) {
+    if (props.left && distanceX.value < 0) return;
+    if (props.right && distanceX.value > 0) return;
+    if (breakpoints.greaterOrEqual('desktop').value) return;
+
+    if (props.show && Math.abs(distanceX.value) / containerWidth.value >= 0.5) {
+      if (
+        (props.left && direction === SwipeDirection.LEFT) ||
+        (props.right && direction === SwipeDirection.RIGHT)
+      ) {
+        emit('update:show', false);
+      }
+    }
+  },
 });
 </script>
 
