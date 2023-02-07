@@ -77,10 +77,10 @@ onClickOutside(sidebarRef, () => {
     height: 100%;
     top: 0;
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.04);
     z-index: -1;
 
-    animation-duration: 0.5s;
+    animation-duration: 0.3s;
     animation-name: overlay-enter;
     animation-delay: 0.4s;
     animation-fill-mode: backwards;
