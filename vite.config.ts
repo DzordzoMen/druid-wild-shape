@@ -20,8 +20,8 @@ export default defineConfig({
         start_url: '/',
         orientation: 'portrait-primary',
         description: 'Dungeons and Dragons 5 - Druid Wild Shape',
-        theme_color: '#18181b',
-        background_color: '#121212',
+        theme_color: '#121212',
+        background_color: '#18181b',
         icons: [
           {
             src: '/logos/favicon-16x16.png',
