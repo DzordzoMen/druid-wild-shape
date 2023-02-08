@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue';
-import { onClickOutside, useBreakpoints, usePointerSwipe } from '@vueuse/core';
+import { onClickOutside, useBreakpoints, useSwipe } from '@vueuse/core';
 import { SwipeDirection } from '@vueuse/core';
 
 const breakpoints = useBreakpoints({
@@ -40,19 +40,14 @@ const transitionName = computed(() => {
   return 'left';
 });
 
-const containerWidth = computed(() => sidebarRef.value?.offsetWidth ?? 0);
-
 onClickOutside(sidebarRef, () => {
   if (breakpoints.smallerOrEqual('tablet').value) emit('update:show', false);
 });
 
-const { distanceX } = usePointerSwipe(sidebarRef, {
-  onSwipeEnd(e: PointerEvent, direction: SwipeDirection) {
-    if (props.left && distanceX.value < 0) return;
-    if (props.right && distanceX.value > 0) return;
-    if (breakpoints.greaterOrEqual('desktop').value) return;
-
-    if (props.show && Math.abs(distanceX.value) / containerWidth.value >= 0.5) {
+const { coordsStart, coordsEnd } = useSwipe(sidebarRef, {
+  onSwipeEnd(e: TouchEvent, direction: SwipeDirection) {
+    if (Math.abs(coordsEnd.x - coordsStart.x) > 100) {
+      if (breakpoints.greaterOrEqual('desktop').value) return;
       if (
         (props.left && direction === SwipeDirection.LEFT) ||
         (props.right && direction === SwipeDirection.RIGHT)
