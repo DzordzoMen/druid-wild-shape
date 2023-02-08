@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch } from 'vue';
+import { ref, computed, watch, defineExpose } from 'vue';
 import { useRoute } from 'vue-router';
 import { RouterView } from 'vue-router';
 import { useBreakpoints } from '@vueuse/core';
@@ -53,6 +53,14 @@ watch(
   },
   { immediate: true }
 );
+
+defineExpose({
+  showLeftSidebar,
+  showRightSidebar,
+  breakpoints,
+  toggleLeftSidebar,
+  toggleRightSidebar,
+});
 </script>
 
 <template>
