@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, watch, defineExpose } from 'vue';
+import { ref, computed, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { RouterView } from 'vue-router';
 import { useBreakpoints } from '@vueuse/core';
@@ -54,12 +54,20 @@ watch(
   { immediate: true }
 );
 
-defineExpose({
-  showLeftSidebar,
-  showRightSidebar,
-  breakpoints,
-  toggleLeftSidebar,
-  toggleRightSidebar,
+watch([showLeftSidebar, showRightSidebar], ([showLeft, showRight]) => {
+  if (showLeft || showRight) {
+    window.history.pushState({}, '');
+  }
+});
+
+window.addEventListener('popstate', () => {
+  if (
+    breakpoints.smallerOrEqual('tablet').value &&
+    (showLeftSidebar.value || showRightSidebar.value)
+  ) {
+    toggleLeftSidebar(false);
+    toggleRightSidebar(false);
+  }
 });
 </script>
 
