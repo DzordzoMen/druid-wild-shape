@@ -14,15 +14,35 @@
 </template>
 
 <script setup lang="ts">
+import { getCurrentInstance } from 'vue';
+import { onBeforeRouteLeave } from 'vue-router';
 import { useTitle } from '@vueuse/core';
 import { useBeastsStore } from '@/stores/beasts';
 
 import BeastListGroup from '@/components/BeastListGroup.vue';
 import IconOtter from '@/components/icons/IconOtter.vue';
 
+const instance = getCurrentInstance();
+
 const beastModule = useBeastsStore();
 
 useTitle(`D&D 5 - Druid wild shape`);
+
+onBeforeRouteLeave((to, from, next) => {
+  const { root } = instance ?? {};
+
+  if (root) {
+    if (root?.exposed?.breakpoints?.smallerOrEqual('tablet')?.value) {
+      if (root?.exposed?.showLeftSidebar.value || root?.exposed?.showRightSidebar.value) {
+        root?.exposed?.toggleLeftSidebar();
+        root?.exposed?.toggleRightSidebar();
+        next(false);
+        return;
+      }
+    }
+  }
+  next();
+});
 </script>
 
 <style scoped lang="scss">
