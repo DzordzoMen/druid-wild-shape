@@ -56,7 +56,11 @@ watch(
 
 watch([showLeftSidebar, showRightSidebar], ([showLeft, showRight]) => {
   if (showLeft || showRight) {
-    window.history.pushState({}, '');
+    window.history.pushState({ panelHelper: true }, '');
+  }
+
+  if (!showLeft && !showRight && window.history.state?.panelHelper) {
+    window.history.back();
   }
 });
 
