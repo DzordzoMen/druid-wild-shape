@@ -2,7 +2,7 @@
   <div class="beast-info">
     <template v-if="beastInfo">
       <div class="beast-info__name">
-        <div>{{ beastInfo?.name }}</div>
+        <h1>{{ beastInfo?.name }}</h1>
         <div>{{ beastSizeAndAlignment }}</div>
         <div v-if="beastDescription">{{ beastDescription }}</div>
       </div>
@@ -288,14 +288,14 @@ function getBeastTooltip(tooltipName: string): string | undefined {
     & > div {
       font-size: 14px;
 
-      &:first-child {
-        font-size: 20px;
-        font-weight: 600;
-      }
-
       &:nth-child(3) {
         padding-top: 14px;
       }
+    }
+
+    & > h1 {
+      font-size: 20px;
+      font-weight: 600;
     }
   }
 
