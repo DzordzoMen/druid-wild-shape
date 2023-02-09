@@ -136,15 +136,14 @@
             </ul>
           </div>
         </div>
-
-        <!-- {{ beastInfo }} -->
       </div>
     </template>
 
     <div class="beast-info__cant-find" v-else>
       <icon-otter :height="96" :width="96" />
       Oops, we can't find this beast
-      <!-- button to list -->
+
+      <router-link :to="{ name: 'BeastList' }">See all beasts</router-link>
     </div>
   </div>
 </template>
@@ -368,6 +367,12 @@ function getBeastTooltip(tooltipName: string): string | undefined {
     text-align: center;
     padding: 40px;
     gap: 12px;
+
+    & > a {
+      color: var(--color-text);
+      text-decoration: none;
+      border-bottom: 2px solid var(--primary-color);
+    }
   }
 }
 </style>
