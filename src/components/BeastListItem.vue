@@ -4,7 +4,7 @@
     class="beast-list-item"
   >
     <div class="beast-list-item__row">
-      <div>{{ beast.name }}</div>
+      <h1>{{ beast.name }}</h1>
       <div>CR: {{ beast.challenge }}</div>
     </div>
     <div class="beast-list-item__row">
@@ -62,6 +62,12 @@ const beastLink = computed(() => {
     gap: 14px;
 
     & > div {
+      display: flex;
+      flex: 1 1;
+    }
+
+    & > h1 {
+      font-size: 15px;
       display: flex;
       flex: 1 1;
     }
