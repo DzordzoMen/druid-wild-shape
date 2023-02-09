@@ -70,6 +70,7 @@ const beastLink = computed(() => {
       font-size: 15px;
       display: flex;
       flex: 1 1;
+      font-weight: 600;
     }
 
     &:first-child {
