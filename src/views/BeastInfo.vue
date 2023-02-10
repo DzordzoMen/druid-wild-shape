@@ -369,9 +369,8 @@ function getBeastTooltip(tooltipName: string): string | undefined {
     gap: 12px;
 
     & > a {
-      color: var(--color-text);
+      color: var(--secondary-color);
       text-decoration: none;
-      border-bottom: 2px solid var(--primary-color);
     }
   }
 }
