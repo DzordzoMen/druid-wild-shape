@@ -10,17 +10,53 @@
       </common-input>
 
       <div class="sidebar-label">
-        <label>Size</label>
+        <label>
+          Size
+
+          <div
+            v-if="isFilteringSizes"
+            class="sidebar-label__clear"
+            tabindex="0"
+            @click="resetSelectedSizes()"
+            @keypress.space="resetSelectedSizes()"
+          >
+            Reset
+          </div>
+        </label>
         <common-chip-group v-model:modelValue="selectedSizes" :items="availableSize" />
       </div>
 
       <div class="sidebar-label">
-        <label>Move</label>
+        <label>
+          Move
+
+          <div
+            v-if="isFilteringMoves"
+            class="sidebar-label__clear"
+            tabindex="0"
+            @click="resetSelectedMoves()"
+            @keypress.space="resetSelectedMoves()"
+          >
+            Reset
+          </div>
+        </label>
         <common-chip-group v-model:modelValue="selectedMoves" :items="availableMoves" />
       </div>
 
       <div class="sidebar-label">
-        <label>Environment</label>
+        <label>
+          Environment
+
+          <div
+            v-if="isFilteringEnvs"
+            class="sidebar-label__clear"
+            tabindex="0"
+            @click="resetSelectedEnvs()"
+            @keypress.space="resetSelectedEnvs()"
+          >
+            Reset
+          </div>
+        </label>
         <common-chip-group v-model:modelValue="selectedEnvs" :items="availableEnvs" />
       </div>
     </div>
@@ -73,11 +109,35 @@ const selectedEnvs = computed({
   set: (val: string[]) => filtersModule.setSelectedEnvs(val),
 });
 
+const isFilteringMoves = computed(
+  () => selectedMoves.value?.length !== availableMoves?.length
+);
+
+const isFilteringSizes = computed(
+  () => selectedSizes.value?.length !== availableSize?.length
+);
+
+const isFilteringEnvs = computed(
+  () => selectedEnvs.value?.length !== availableEnvs?.length
+);
+
 onBeforeMount(() => {
   selectedSizes.value = availableSize.map((size) => size.value) as string[];
   selectedMoves.value = availableMoves.map((move) => move.value) as string[];
   selectedEnvs.value = availableEnvs.map((env) => env.value) as string[];
 });
+
+function resetSelectedSizes(): void {
+  selectedSizes.value = [...availableSize.map(({ value }) => value as string)];
+}
+
+function resetSelectedMoves(): void {
+  selectedMoves.value = [...availableMoves.map(({ value }) => value as string)];
+}
+
+function resetSelectedEnvs(): void {
+  selectedEnvs.value = [...availableEnvs.map(({ value }) => value as string)];
+}
 </script>
 
 <style scoped lang="scss">
@@ -100,10 +160,33 @@ onBeforeMount(() => {
   gap: 6px;
 
   & > label {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 4px;
+    justify-content: space-between;
     color: var(--color-text);
     font-family: Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
+    z-index: 2;
+  }
+
+  &__clear {
+    cursor: pointer;
+    color: var(--secondary-color);
+    font-weight: 400;
+    outline: none;
+    animation: fade-in 0.24s ease-in;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 </style>
