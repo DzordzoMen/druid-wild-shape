@@ -6,6 +6,8 @@
         id="druid-level"
         placeholder="0"
         type="number"
+        pattern="[0-9]*"
+        inputmode="numeric"
       >
         <template #label>Druid level</template>
       </common-input>
