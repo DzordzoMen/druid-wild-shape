@@ -1,3 +1,10 @@
 /*    /index.html   200
-https://www.druid-wild-shape.netlify.app/* https://druid-wild-shape.netlify.app/:splat 301!
-http://www.druid-wild-shape.netlify.app/* https://druid-wild-shape.netlify.app/:splat 301!
+
+https://www.druid-wild-shape.ttrpg-kit.com/* https://druid-wild-shape.ttrpg-kit.com/ 301!
+http://www.druid-wild-shape.ttrpg-kit.com/* https://druid-wild-shape.ttrpg-kit.com/ 301!
+
+https://www.ttrpg-kit.com/* https://druid-wild-shape.ttrpg-kit.com/ 301!
+http://www.ttrpg-kit.com/* https://druid-wild-shape.ttrpg-kit.com/ 301!
+
+https://ttrpg-kit.com/* https://druid-wild-shape.ttrpg-kit.com/ 301!
+http://ttrpg-kit.com/* https://druid-wild-shape.ttrpg-kit.com/ 301!
