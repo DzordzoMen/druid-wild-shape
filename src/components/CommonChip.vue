@@ -52,7 +52,7 @@ defineEmits<{
 
     &:hover,
     &:focus-visible {
-      border-color: rgba($color: #fff, $alpha: 0.7);
+      border-color: rgb(159 168 218 / 60%);
     }
   }
 }
