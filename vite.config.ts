@@ -15,7 +15,7 @@ export default defineConfig({
       },
       manifest: {
         name: 'Druid Wild Shape',
-        short_name: 'DWS',
+        short_name: 'Druid Wild Shape',
         display: 'standalone',
         start_url: '/',
         orientation: 'portrait-primary',
